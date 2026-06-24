@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#07080d" />
+<meta name="color-scheme" content="dark" />
+
+<title>Kinet — A Complete Day</title>
+<meta name="description" content="Kinet — four products, one path from dawn to midnight. Fit, Soul, Task, Brief. All on your device." />
+
+<meta property="og:title" content="Kinet — A Complete Day" />
+<meta property="og:description" content="Four products. One day. One person. Not a toolset — a way to finish the day." />
+<meta property="og:type" content="website" />
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' x2='1' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%2300d4c8'/%3E%3Cstop offset='.5' stop-color='%237c8cff'/%3E%3Cstop offset='1' stop-color='%23ff6b8a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='8' fill='url(%23g)'/%3E%3Cpath d='M7 22 C12 10 20 10 25 22' fill='none' stroke='%23fff' stroke-width='2.6' stroke-linecap='round'/%3E%3C/svg%3E" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Serif+SC:wght@300;400;600&family=Noto+Serif+JP:wght@300;400;600&display=swap" rel="stylesheet" />
+
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  :root {
+    --ink-1: #f4f5f8; --ink-2: #b6bdce; --ink-3: #6b7591; --ink-4: #3a4258;
+    --bg-0: #07080d; --bg-1: #0e1018; --bg-2: #161924;
+    --line: #1f2330; --line-2: #2b3142;
+    --c-1: #00d4c8; --c-2: #7c8cff; --c-3: #ffb547; --c-4: #ff6b8a;
+    --gradient: linear-gradient(135deg, var(--c-1) 0%, var(--c-2) 35%, var(--c-3) 70%, var(--c-4) 100%);
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Hiragino Sans', sans-serif;
+    --font-serif: 'Noto Serif SC', 'Noto Serif JP', 'Songti SC', serif;
+    --font-mono: 'SF Mono', 'JetBrains Mono', Menlo, monospace;
+  }
+  html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; scroll-behavior: smooth; }
+  body {
+    margin: 0; background: var(--bg-0); color: var(--ink-1);
+    font-family: var(--font-sans); font-size: 17px; line-height: 1.6; font-weight: 400;
+    background-image:
+      radial-gradient(1px 1px at 12% 18%, rgba(255,255,255,.5) 50%, transparent 100%),
+      radial-gradient(1px 1px at 78% 32%, rgba(255,255,255,.35) 50%, transparent 100%),
+      radial-gradient(1px 1px at 35% 67%, rgba(255,255,255,.4) 50%, transparent 100%),
+      radial-gradient(1px 1px at 88% 81%, rgba(255,255,255,.3) 50%, transparent 100%),
+      radial-gradient(1px 1px at 55% 12%, rgba(255,255,255,.25) 50%, transparent 100%);
+    background-size: 100% 100%; background-attachment: fixed;
+  }
+  ::selection { background: rgba(124,140,255,.35); color: var(--ink-1); }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--c-2); outline-offset: 4px; border-radius: 4px; }
+  html[lang="ja"] body { font-family: 'Inter', 'Hiragino Sans', -apple-system, BlinkMacSystemFont, sans-serif; }
+
+  /* ── Nav ── */
+  nav { position: sticky; top: 0; z-index: 50; backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); background: rgba(7,8,13,.72); border-bottom: 1px solid var(--line); }
+  nav .row { max-width: 1080px; margin: 0 auto; padding: 16px 32px; display: flex; align-items: center; justify-content: space-between; }
+  nav .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; letter-spacing: -.01em; font-size: 18px; }
+  nav .brand .mark { width: 26px; height: 26px; border-radius: 7px; }
+  nav .links { display: flex; gap: 22px; align-items: center; }
+  nav .links a { font-size: 13px; color: var(--ink-3); transition: color .2s; }
+  nav .links a:hover { color: var(--ink-1); }
+  nav .navdiv { width: 1px; height: 18px; background: var(--line-2); margin: 0 4px; }
+  nav .lang { display: flex; gap: 4px; }
+  nav .lang button { background: transparent; border: 1px solid var(--line-2); color: var(--ink-3); border-radius: 6px; padding: 4px 9px; font-size: 11px; font-family: var(--font-mono); cursor: pointer; transition: all .15s; }
+  nav .lang button:hover { color: var(--ink-1); }
+  nav .lang button.on { color: #fff; border-color: var(--c-2); background: rgba(124,140,255,.18); }
+  @media (max-width: 760px) { nav .links a, nav .navdiv { display: none; } }
+
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 88px 32px 120px; }
+  @media (max-width: 640px) { .wrap { padding: 56px 20px 80px; } }
+
+  /* ── Hero ── */
+  .hero { text-align: center; margin-bottom: 88px; }
+  .eyebrow { font-family: var(--font-mono); font-size: 11px; letter-spacing: .35em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 32px; }
+  .eyebrow .dot { display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--c-1); vertical-align: middle; margin: 0 12px; box-shadow: 0 0 12px var(--c-1); }
+  h1 { font-size: clamp(46px, 7.5vw, 88px); line-height: 1.04; letter-spacing: -.035em; font-weight: 700; margin: 0 0 28px; background: var(--gradient); background-size: 200% 200%; -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; animation: hue 18s ease-in-out infinite; }
+  @keyframes hue { 0%,100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
+  @media (prefers-reduced-motion: reduce) { h1 { animation: none; } }
+  .hero .lede { font-family: var(--font-serif); font-size: clamp(18px, 2vw, 22px); line-height: 1.65; color: var(--ink-2); max-width: 640px; margin: 0 auto; font-weight: 300; }
+  .hero .lede em { font-style: normal; color: var(--ink-1); border-bottom: 1px solid var(--line-2); padding-bottom: 1px; }
+
+  /* ── Day arc ── */
+  .arc { margin: 56px 0 96px; height: 220px; background: var(--bg-1); border: 1px solid var(--line); border-radius: 6px; overflow: hidden; }
+  .arc svg { width: 100%; height: 100%; display: block; }
+
+  /* ── Products ── */
+  .section-label { font-family: var(--font-mono); font-size: 11px; letter-spacing: .3em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 14px; }
+  .section-h { font-size: clamp(26px, 4vw, 38px); font-weight: 600; letter-spacing: -.02em; margin: 0 0 48px; }
+
+  .products { display: grid; grid-template-columns: 1fr; gap: 1px; background: var(--line); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .product { display: grid; grid-template-columns: 130px 1fr; gap: 32px; padding: 44px 36px; background: var(--bg-1); transition: background .3s ease; }
+  .product:hover { background: var(--bg-2); }
+  .product .meta { display: flex; flex-direction: column; gap: 8px; }
+  .product .num { font-family: var(--font-mono); font-size: 11px; letter-spacing: .25em; text-transform: uppercase; }
+  .product .time { font-family: var(--font-serif); font-size: 14px; color: var(--ink-2); }
+  .product[data-i="0"] .num { color: var(--c-1); }
+  .product[data-i="1"] .num { color: var(--c-2); }
+  .product[data-i="2"] .num { color: var(--c-3); }
+  .product[data-i="3"] .num { color: var(--c-4); }
+  .product .body h3 { font-size: 34px; font-weight: 700; letter-spacing: -.02em; margin: 0 0 4px; }
+  .product .body .role { font-family: var(--font-serif); font-size: 16px; color: var(--ink-2); margin-bottom: 18px; font-weight: 300; }
+  .product .body .one-liner { font-size: 22px; line-height: 1.4; font-weight: 500; margin: 0 0 16px; letter-spacing: -.01em; }
+  .product .body .one-liner em { font-style: normal; background: var(--gradient); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+  .product .body .details { font-size: 15px; color: var(--ink-2); line-height: 1.75; max-width: 600px; margin: 0 0 20px; }
+  .product .body .details strong { color: var(--ink-1); font-weight: 600; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 22px; }
+  .chip { font-size: 12px; font-family: var(--font-mono); letter-spacing: .04em; color: var(--ink-2); border: 1px solid var(--line-2); padding: 6px 12px; border-radius: 999px; background: rgba(255,255,255,.015); }
+
+  .links-row { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+  .cta { display: inline-flex; align-items: center; gap: 10px; font-size: 15px; font-weight: 700; padding: 13px 22px; border-radius: 13px; border: none; color: #fff; background: var(--gradient); box-shadow: 0 10px 26px rgba(124,140,255,.32); transition: transform .15s, box-shadow .2s; text-decoration: none; }
+  .cta:hover { transform: translateY(-2px); box-shadow: 0 14px 32px rgba(124,140,255,.48); }
+  .cta svg { width: 18px; height: 18px; fill: #fff; }
+  .site { display: inline-flex; align-items: center; gap: 9px; font-size: 14px; font-weight: 600; padding: 13px 20px; border-radius: 13px; border: 1px solid var(--line-2); color: var(--ink-1); background: var(--bg-2); text-decoration: none; transition: transform .15s, border-color .2s, background .2s; }
+  .site:hover { transform: translateY(-2px); border-color: var(--ink-3); background: #1d2030; }
+  .site svg { width: 16px; height: 16px; stroke: currentColor; }
+
+  @media (max-width: 640px) {
+    .product { grid-template-columns: 1fr; gap: 12px; padding: 30px 22px; }
+    .product .meta { flex-direction: row; gap: 16px; align-items: baseline; }
+  }
+
+  /* ── Ethos ── */
+  .ethos { margin: 24px 0 96px; padding: 56px 48px; border: 1px solid var(--line); border-radius: 8px; background: linear-gradient(180deg, var(--bg-1), var(--bg-0)); text-align: center; }
+  .ethos .lock { font-size: 32px; margin-bottom: 18px; }
+  .ethos h2 { font-size: clamp(24px, 3.4vw, 32px); font-weight: 600; letter-spacing: -.02em; margin: 0 0 16px; }
+  .ethos p { font-family: var(--font-serif); font-size: clamp(17px, 2vw, 20px); line-height: 1.7; color: var(--ink-2); max-width: 620px; margin: 0 auto; font-weight: 300; }
+  .ethos p strong { color: var(--ink-1); font-weight: 400; border-bottom: 1px solid var(--line-2); }
+  @media (max-width: 640px) { .ethos { padding: 40px 24px; } }
+
+  /* ── Closing + footer ── */
+  .closing { text-align: center; max-width: 720px; margin: 0 auto; }
+  .closing .small { font-family: var(--font-mono); font-size: 11px; letter-spacing: .3em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 24px; }
+  .closing p { font-family: var(--font-serif); font-size: clamp(20px, 2.4vw, 26px); line-height: 1.55; color: var(--ink-1); font-weight: 300; margin: 0 0 20px; }
+  .closing .grad { background: var(--gradient); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; font-weight: 600; }
+  .closing .signoff { font-size: 14px; color: var(--ink-3); margin-top: 40px; }
+  .closing .signoff strong { color: var(--ink-1); font-weight: 600; }
+  footer { margin-top: 96px; padding-top: 32px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: 12px; color: var(--ink-3); font-family: var(--font-mono); letter-spacing: .04em; }
+  footer .brand { color: var(--ink-2); }
+</style>
+</head>
+<body>
+
+<!-- ══════════ NAV ══════════ -->
+<nav>
+  <div class="row">
+    <a class="brand" href="#top"><svg class="mark" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs><linearGradient id="navg" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#00d4c8"/><stop offset=".5" stop-color="#7c8cff"/><stop offset="1" stop-color="#ff6b8a"/></linearGradient></defs><rect width="32" height="32" rx="8" fill="url(#navg)"/><path d="M7 22 C12 10 20 10 25 22" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/></svg>Kinet</a>
+    <div class="links">
+      <a href="#fit">Fit</a><a href="#soul">Soul</a><a href="#task">Task</a><a href="#brief">Brief</a>
+      <span class="navdiv"></span>
+      <div class="lang">
+        <button data-l="zh-Hans" class="on">简</button>
+        <button data-l="zh-Hant">繁</button>
+        <button data-l="en">EN</button>
+        <button data-l="ja">日</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap" id="top">
+
+  <!-- ══════════ HERO ══════════ -->
+  <header class="hero">
+    <div class="eyebrow"><span class="dot"></span>KINET · 2026<span class="dot"></span></div>
+    <h1 data-i18n="h1"></h1>
+    <p class="lede" data-i18n="lede"></p>
+  </header>
+
+  <!-- ══════════ DAY ARC ══════════ -->
+  <div class="arc" aria-hidden="true">
+    <svg viewBox="0 0 1080 220" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <defs>
+        <linearGradient id="day" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#00d4c8" stop-opacity="0"/><stop offset=".08" stop-color="#00d4c8"/>
+          <stop offset=".35" stop-color="#7c8cff"/><stop offset=".65" stop-color="#ffb547"/>
+          <stop offset=".92" stop-color="#ff6b8a"/><stop offset="1" stop-color="#ff6b8a" stop-opacity="0"/>
+        </linearGradient>
+        <linearGradient id="fill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="rgba(255,255,255,0)"/><stop offset="1" stop-color="rgba(255,255,255,.04)"/></linearGradient>
+      </defs>
+      <line x1="40" y1="175" x2="1040" y2="175" stroke="#2b3142" stroke-width="1"/>
+      <g font-family="SF Mono, monospace" font-size="10" fill="#6b7591" letter-spacing="2">
+        <text x="40" y="200">06:00</text><text x="200" y="200">10:00</text><text x="360" y="200">14:00</text>
+        <text x="540" y="200">18:00</text><text x="740" y="200">22:00</text><text x="960" y="200">02:00</text><text x="1040" y="200" text-anchor="end">06:00</text>
+      </g>
+      <path d="M 40 175 C 200 50, 360 50, 540 80 S 880 165, 1040 175" fill="none" stroke="url(#day)" stroke-width="3" stroke-linecap="round"/>
+      <path d="M 40 175 C 200 50, 360 50, 540 80 S 880 165, 1040 175 L 1040 175 L 40 175 Z" fill="url(#fill)"/>
+      <g font-family="Inter, sans-serif">
+        <circle cx="135" cy="90" r="6" fill="#00d4c8"/><text x="135" y="70" text-anchor="middle" fill="#f4f5f8" font-size="13" font-weight="600">Fit</text><text x="135" y="58" text-anchor="middle" fill="#00d4c8" font-size="9" letter-spacing="2">BODY</text>
+        <circle cx="430" cy="62" r="6" fill="#7c8cff"/><text x="430" y="42" text-anchor="middle" fill="#f4f5f8" font-size="13" font-weight="600">Soul</text><text x="430" y="30" text-anchor="middle" fill="#7c8cff" font-size="9" letter-spacing="2">MIND</text>
+        <circle cx="725" cy="105" r="6" fill="#ffb547"/><text x="725" y="128" text-anchor="middle" fill="#f4f5f8" font-size="13" font-weight="600">Task</text><text x="725" y="142" text-anchor="middle" fill="#ffb547" font-size="9" letter-spacing="2">TIME</text>
+        <circle cx="960" cy="165" r="6" fill="#ff6b8a"/><text x="960" y="155" text-anchor="middle" fill="#f4f5f8" font-size="13" font-weight="600">Brief</text><text x="960" y="143" text-anchor="middle" fill="#ff6b8a" font-size="9" letter-spacing="2">CLARITY</text>
+      </g>
+    </svg>
+  </div>
+
+  <!-- ══════════ PRODUCTS ══════════ -->
+  <div class="section-label" data-i18n="products_label"></div>
+  <h2 class="section-h" data-i18n="products_h"></h2>
+
+  <section class="products">
+
+    <article class="product" data-i="0" id="fit">
+      <div class="meta"><div class="num">01 · MORNING</div><div class="time" data-i18n="time_0"></div></div>
+      <div class="body">
+        <h3>KinetFit</h3>
+        <div class="role" data-i18n="role_0"></div>
+        <p class="one-liner" data-i18n="line_0"></p>
+        <p class="details" data-i18n="detail_0"></p>
+        <div class="chips"><span class="chip" data-i18n="chip_0_0"></span><span class="chip" data-i18n="chip_0_1"></span><span class="chip" data-i18n="chip_0_2"></span></div>
+        <div class="links-row">
+          <a class="cta" href="https://apps.apple.com/app/id6773755689" target="_blank" rel="noopener"><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.3-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.5z"/></svg>App Store</a>
+          <a class="site" href="https://phinn.github.io/kinet/index2.html" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.5 2.7 2.5 15.3 0 18M12 3c-2.5 2.7-2.5 15.3 0 18"/></svg><span data-i18n="cta_site"></span></a>
+        </div>
+      </div>
+    </article>
+
+    <article class="product" data-i="1" id="soul">
+      <div class="meta"><div class="num">02 · MIDDAY</div><div class="time" data-i18n="time_1"></div></div>
+      <div class="body">
+        <h3>KinetSoul</h3>
+        <div class="role" data-i18n="role_1"></div>
+        <p class="one-liner" data-i18n="line_1"></p>
+        <p class="details" data-i18n="detail_1"></p>
+        <div class="chips"><span class="chip" data-i18n="chip_1_0"></span><span class="chip" data-i18n="chip_1_1"></span><span class="chip" data-i18n="chip_1_2"></span></div>
+        <div class="links-row">
+          <a class="cta" href="https://apps.apple.com/app/id6780600464" target="_blank" rel="noopener"><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.3-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.5z"/></svg>App Store</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="product" data-i="2" id="task">
+      <div class="meta"><div class="num">03 · EVENING</div><div class="time" data-i18n="time_2"></div></div>
+      <div class="body">
+        <h3>KinetTask</h3>
+        <div class="role" data-i18n="role_2"></div>
+        <p class="one-liner" data-i18n="line_2"></p>
+        <p class="details" data-i18n="detail_2"></p>
+        <div class="chips"><span class="chip" data-i18n="chip_2_0"></span><span class="chip" data-i18n="chip_2_1"></span><span class="chip" data-i18n="chip_2_2"></span></div>
+        <div class="links-row">
+          <a class="cta" href="https://apps.apple.com/app/id6780944289" target="_blank" rel="noopener"><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.3-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.5z"/></svg>App Store</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="product" data-i="3" id="brief">
+      <div class="meta"><div class="num">04 · NIGHT</div><div class="time" data-i18n="time_3"></div></div>
+      <div class="body">
+        <h3>KinetBrief</h3>
+        <div class="role" data-i18n="role_3"></div>
+        <p class="one-liner" data-i18n="line_3"></p>
+        <p class="details" data-i18n="detail_3"></p>
+        <div class="chips"><span class="chip" data-i18n="chip_3_0"></span><span class="chip" data-i18n="chip_3_1"></span><span class="chip" data-i18n="chip_3_2"></span></div>
+        <div class="links-row">
+          <a class="cta" href="https://apps.apple.com/app/id6782778566" target="_blank" rel="noopener"><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.3-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.5z"/></svg>App Store</a>
+          <a class="site" href="https://phinn.github.io/kinetbrief/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.5 2.7 2.5 15.3 0 18M12 3c-2.5 2.7-2.5 15.3 0 18"/></svg><span data-i18n="cta_site"></span></a>
+        </div>
+      </div>
+    </article>
+
+  </section>
+
+  <!-- ══════════ ETHOS ══════════ -->
+  <section class="ethos">
+    <div class="lock">🔒</div>
+    <h2 data-i18n="ethos_h2"></h2>
+    <p data-i18n="ethos_p"></p>
+  </section>
+
+  <!-- ══════════ CLOSING ══════════ -->
+  <section class="closing">
+    <div class="small">A Complete Day</div>
+    <p data-i18n="closing_p"></p>
+    <div class="signoff" data-i18n="signoff"></div>
+  </section>
+
+  <footer>
+    <div class="brand">© Kinet</div>
+    <div>Designed for one person · All on-device</div>
+  </footer>
+
+</main>
+
+<script>
+const I = {
+  "zh-Hans": {
+    h1:"一个人的完整一天。",
+    lede:"这不是四个产品的清单。<br>是 <em>一条</em> 从清晨到深夜、再回到清晨的路径。",
+    products_label:"四个产品，一条路径", products_h:"把一天过完。",
+    time_0:"清晨", time_1:"午后", time_2:"傍晚", time_3:"深夜",
+    role_0:"身体 — 先把身体打开", role_1:"心理 — 给情绪一个出口", role_2:"任务 — 把今天最重要的三件事做了", role_3:"会议 — 把今天没白开",
+    line_0:"<em>动起来</em>，比完美计划重要。", line_1:"不是为了<em>变好</em>，是为了不被压垮。", line_2:"一次只做<em>一件事</em>。", line_3:"录下会议，<em>明早一张简报</em>。",
+    detail_0:"今天走多少步、昨晚睡得多深、心率曲线是什么形状。<strong>不追求「打满」</strong>，追求「让身体告诉你它想要什么」。从起床的第一杯水开始。",
+    detail_1:"中午十分钟，做一次呼吸训练、一段正念、或只是写下一句你不敢说的话。<strong>承认今天有点累，是治愈的开始</strong>，不是软弱的证据。",
+    detail_2:"今天、这周、长期。三个清单，一次聚焦一件事。<strong>不是用来证明你多努力的</strong>，是用来证明你今天没有虚度的。做完就停。",
+    detail_3:"转写、AI 摘要、待办提取，全在你 iPhone 的芯片上完成。<strong>录音从不离开你的手机</strong>——没有服务器、没有账号、没有上传。第二天早上，一张「今天必做」清单准时送到，今天就真的收口了。",
+    chip_0_0:"步数", chip_0_1:"睡眠", chip_0_2:"心率",
+    chip_1_0:"呼吸", chip_1_1:"正念", chip_1_2:"情绪",
+    chip_2_0:"今天", chip_2_1:"本周", chip_2_2:"长期",
+    chip_3_0:"本机转写", chip_3_1:"AI 摘要", chip_3_2:"早间简报",
+    ethos_h2:"四件事，全部在你的设备上。",
+    ethos_p:"Kinet 的四个产品，没有账号、没有上传、没有谁在后台看你的一天。身体的数据、心理的话、今天的任务、会议的录音——<strong>都只属于你</strong>。",
+    closing_p:"一个人要撑过一天，需要的不是更多 app。<br>是 <span class='grad'>四个真正愿意用</span> 的东西。",
+    signoff:"<strong>Kinet</strong> · 一个人的日常系统 · 2026",
+    cta_site:"官网"
+  },
+  "zh-Hant": {
+    h1:"一個人的完整一天。",
+    lede:"這不是四個產品的清單。<br>是 <em>一條</em> 從清晨到深夜、再回到清晨的路徑。",
+    products_label:"四個產品，一條路徑", products_h:"把一天過完。",
+    time_0:"清晨", time_1:"午後", time_2:"傍晚", time_3:"深夜",
+    role_0:"身體 — 先把身體打開", role_1:"心理 — 給情緒一個出口", role_2:"任務 — 把今天最重要的三件事做了", role_3:"會議 — 把今天沒白開",
+    line_0:"<em>動起來</em>，比完美計畫重要。", line_1:"不是為了<em>變好</em>，是為了不被壓垮。", line_2:"一次只做<em>一件事</em>。", line_3:"錄下會議，<em>明早一張簡報</em>。",
+    detail_0:"今天走多少步、昨晚睡得多深、心率曲線是什麼形狀。<strong>不追求「打滿」</strong>，追求「讓身體告訴你它想要什麼」。從起床的第一杯水開始。",
+    detail_1:"中午十分鐘，做一次呼吸訓練、一段正念、或只是寫下一句你不敢說的話。<strong>承認今天有點累，是治癒的開始</strong>，不是軟弱的證據。",
+    detail_2:"今天、這週、長期。三個清單，一次聚焦一件事。<strong>不是用來證明你多努力的</strong>，是用來證明你今天沒有虛度的。做完就停。",
+    detail_3:"轉寫、AI 摘要、待辦提取，全在你 iPhone 的晶片上完成。<strong>錄音從不離開你的手機</strong>——沒有伺服器、沒有帳號、沒有上傳。第二天早上，一張「今天必做」清單準時送到，今天就真的收口了。",
+    chip_0_0:"步數", chip_0_1:"睡眠", chip_0_2:"心率",
+    chip_1_0:"呼吸", chip_1_1:"正念", chip_1_2:"情緒",
+    chip_2_0:"今天", chip_2_1:"本週", chip_2_2:"長期",
+    chip_3_0:"本機轉寫", chip_3_1:"AI 摘要", chip_3_2:"早間簡報",
+    ethos_h2:"四件事，全部在你的裝置上。",
+    ethos_p:"Kinet 的四個產品，沒有帳號、沒有上傳、沒有誰在背景看你的一天。身體的數據、心理的話、今天的任務、會議的錄音——<strong>都只屬於你</strong>。",
+    closing_p:"一個人要撐過一天，需要的不是更多 app。<br>是 <span class='grad'>四個真正願意用</span> 的東西。",
+    signoff:"<strong>Kinet</strong> · 一個人的日常系統 · 2026",
+    cta_site:"官網"
+  },
+  "en": {
+    h1:"A complete day, for one.",
+    lede:"This isn't a list of four products.<br>It's <em>one</em> path — dawn to midnight, and back to dawn.",
+    products_label:"Four products, one path", products_h:"Finish the day.",
+    time_0:"Morning", time_1:"Midday", time_2:"Evening", time_3:"Night",
+    role_0:"Body — wake the body up first", role_1:"Mind — give your feelings a way out", role_2:"Focus — do today's three most important things", role_3:"Meetings — make today count",
+    line_0:"<em>Move</em> matters more than the perfect plan.", line_1:"Not to <em>get better</em> — to not get crushed.", line_2:"Do <em>one thing</em> at a time.", line_3:"Record the meeting, get <em>a brief by morning</em>.",
+    detail_0:"How many steps today, how deep you slept, the shape of your heart-rate curve. <strong>Not about \"maxing out\"</strong> — about letting your body tell you what it wants. Start with the first glass of water.",
+    detail_1:"Ten minutes at noon: a breathing exercise, a moment of mindfulness, or just one sentence you didn't dare say. <strong>Admitting you're a bit tired is where healing begins</strong>, not proof of weakness.",
+    detail_2:"Today, this week, long-term. Three lists, one thing in focus. <strong>Not to prove how hard you work</strong> — to prove today wasn't wasted. Stop when it's done.",
+    detail_3:"Transcription, AI summary, and to-do extraction — all on your iPhone's chip. <strong>Recordings never leave your phone</strong> — no servers, no accounts, no uploads. The next morning, a \"must-do today\" list arrives on time, and the day truly closes.",
+    chip_0_0:"Steps", chip_0_1:"Sleep", chip_0_2:"Heart rate",
+    chip_1_0:"Breath", chip_1_1:"Mindfulness", chip_1_2:"Mood",
+    chip_2_0:"Today", chip_2_1:"This week", chip_2_2:"Long-term",
+    chip_3_0:"On-device transcription", chip_3_1:"AI summary", chip_3_2:"Morning brief",
+    ethos_h2:"Four things, all on your device.",
+    ethos_p:"Kinet's four products need no account, send nothing, and nobody watches your day in the background. Your body's data, your mind's words, today's tasks, the meeting recordings — <strong>yours alone</strong>.",
+    closing_p:"To get through a day, you don't need more apps.<br>You need <span class='grad'>four things you'll actually use</span>.",
+    signoff:"<strong>Kinet</strong> · A daily system for one · 2026",
+    cta_site:"Website"
+  },
+  "ja": {
+    h1:"ひとりの、完全な一日。",
+    lede:"これは4つの製品のリストじゃない。<br>夜明けから深夜、そしてまた夜明けへ — <em>ひとつ</em>の道のりだ。",
+    products_label:"4つの製品、ひとつの道のり", products_h:"一日を終わらせる。",
+    time_0:"朝", time_1:"昼", time_2:"夕", time_3:"夜",
+    role_0:"体 — まず体を起こす", role_1:"心 — 感情の逃げ道をつくる", role_2:"タスク — 今日の大事な3つをやる", role_3:"会議 — 今日を無駄にしない",
+    line_0:"<em>動く</em>ことが、完璧な計画より大切。", line_1:"<em>良く</em>なるためじゃない、潰されないために。", line_2:"一度に<em>ひとつ</em>だけ。", line_3:"会議を録音、<em>朝にブリーフ</em>を。",
+    detail_0:"今日の歩数、昨晩の睡眠の深さ、心拍曲線のかたち。<strong>「埋める」ことが目的じゃない</strong>、「体が何を欲しがっているか」を知ること。朝一杯の水から始める。",
+    detail_1:"昼の10分。呼吸トレーニング、マインドフルネス、あるいは言えなかった一言を書くだけ。<strong>「今日は少し疲れてる」と認めることは治療の始まり</strong>で、弱さの証拠じゃない。",
+    detail_2:"今日、今週、長期。3つのリスト、いまはひとつに絞る。<strong>どれだけ頑張ったかの証明じゃない</strong>、今日を無駄にしなかった証明。終わったらやめる。",
+    detail_3:"文字起こし、AI要約、タスク抽出 — すべてiPhoneのチップで完結。<strong>録音はあなたの電話から出ません</strong> — サーバーもアカウントもアップロードもなし。翌朝、「今日やること」が届いて、一日が本当に幕を閉じる。",
+    chip_0_0:"歩数", chip_0_1:"睡眠", chip_0_2:"心拍",
+    chip_1_0:"呼吸", chip_1_1:"マインドフルネス", chip_1_2:"感情",
+    chip_2_0:"今日", chip_2_1:"今週", chip_2_2:"長期",
+    chip_3_0:"オンデバイス文字起こし", chip_3_1:"AI要約", chip_3_2:"朝のブリーフ",
+    ethos_h2:"4つのこと、すべてあなたのデバイスで。",
+    ethos_p:"Kinetの4つの製品は、アカウントもアップロードもなく、誰も裏であなたの一日を見ていない。体のデータ、心の言葉、今日のタスク、会議の録音 — <strong>すべてあなただけのもの</strong>。",
+    closing_p:"一日を乗り切るのに、もっと多くのアプリはいらない。<br>必要なのは <span class='grad'>本当に使いたい4つ</span>。",
+    signoff:"<strong>Kinet</strong> · ひとりの日常システム · 2026",
+    cta_site:"公式サイト"
+  }
+};
+function applyLang(l){
+  const d = I[l] || I["zh-Hans"];
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const k = el.getAttribute('data-i18n');
+    if(d[k]!=null) el.innerHTML = d[k];
+  });
+  document.documentElement.lang = l==='en'?'en':l==='ja'?'ja':l;
+  document.querySelectorAll('.lang button').forEach(b=>b.classList.toggle('on', b.dataset.l===l));
+}
+document.querySelectorAll('.lang button').forEach(b=>b.addEventListener('click',()=>applyLang(b.dataset.l)));
+applyLang('en');
+</script>
+</body>
+</html>
