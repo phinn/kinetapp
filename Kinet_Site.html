@@ -7,10 +7,10 @@
 <meta name="color-scheme" content="dark" />
 
 <title>Kinet — A Complete Day</title>
-<meta name="description" content="Kinet — four products, one path from dawn to midnight. Fit, Soul, Task, Brief. All on your device." />
+<meta name="description" content="Kinet — nine products. Four carry the day from dawn to midnight; five hold the rest of life together. All on your device." />
 
 <meta property="og:title" content="Kinet — A Complete Day" />
-<meta property="og:description" content="Four products. One day. One person. Not a toolset — a way to finish the day." />
+<meta property="og:description" content="Nine products. One person. Not a toolset — a way to finish the day, and hold the rest of life together." />
 <meta property="og:type" content="website" />
 
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' x2='1' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%2300d4c8'/%3E%3Cstop offset='.5' stop-color='%237c8cff'/%3E%3Cstop offset='1' stop-color='%23ff6b8a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='8' fill='url(%23g)'/%3E%3Cpath d='M7 22 C12 10 20 10 25 22' fill='none' stroke='%23fff' stroke-width='2.6' stroke-linecap='round'/%3E%3C/svg%3E" />
@@ -25,7 +25,7 @@
     --ink-1: #f4f5f8; --ink-2: #b6bdce; --ink-3: #6b7591; --ink-4: #3a4258;
     --bg-0: #07080d; --bg-1: #0e1018; --bg-2: #161924;
     --line: #1f2330; --line-2: #2b3142;
-    --c-1: #00d4c8; --c-2: #7c8cff; --c-3: #ffb547; --c-4: #ff6b8a;
+    --c-1: #00d4c8; --c-2: #7c8cff; --c-3: #ffb547; --c-4: #ff6b8a; --c-5: #3ecf8e;
     --gradient: linear-gradient(135deg, var(--c-1) 0%, var(--c-2) 35%, var(--c-3) 70%, var(--c-4) 100%);
     --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Hiragino Sans', sans-serif;
     --font-serif: 'Noto Serif SC', 'Noto Serif JP', 'Songti SC', serif;
@@ -93,6 +93,11 @@
   .product[data-i="1"] .num { color: var(--c-2); }
   .product[data-i="2"] .num { color: var(--c-3); }
   .product[data-i="3"] .num { color: var(--c-4); }
+  .product[data-i="4"] .num { color: var(--c-5); }
+  .product[data-i="5"] .num { color: var(--c-1); }
+  .product[data-i="6"] .num { color: var(--c-2); }
+  .product[data-i="7"] .num { color: var(--c-3); }
+  .product[data-i="8"] .num { color: var(--c-4); }
   .product .body h3 { font-size: 34px; font-weight: 700; letter-spacing: -.02em; margin: 0 0 4px; }
   .product .body .role { font-family: var(--font-serif); font-size: 16px; color: var(--ink-2); margin-bottom: 18px; font-weight: 300; }
   .product .body .one-liner { font-size: 22px; line-height: 1.4; font-weight: 500; margin: 0 0 16px; letter-spacing: -.01em; }
@@ -103,6 +108,7 @@
   .chip { font-size: 12px; font-family: var(--font-mono); letter-spacing: .04em; color: var(--ink-2); border: 1px solid var(--line-2); padding: 6px 12px; border-radius: 999px; background: rgba(255,255,255,.015); }
 
   .links-row { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+  .soon { display: inline-flex; align-items: center; font-family: var(--font-mono); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-3); border: 1px dashed var(--line-2); padding: 13px 20px; border-radius: 13px; }
   .cta { display: inline-flex; align-items: center; gap: 10px; font-size: 15px; font-weight: 700; padding: 13px 22px; border-radius: 13px; border: none; color: #fff; background: var(--gradient); box-shadow: 0 10px 26px rgba(124,140,255,.32); transition: transform .15s, box-shadow .2s; text-decoration: none; }
   .cta:hover { transform: translateY(-2px); box-shadow: 0 14px 32px rgba(124,140,255,.48); }
   .cta svg { width: 18px; height: 18px; fill: #fff; }
@@ -116,6 +122,9 @@
   }
 
   /* ── Ethos ── */
+  .beyond-head { margin-top: 96px; }
+  .beyond-lede { font-family: var(--font-serif); font-size: clamp(16px, 1.8vw, 19px); line-height: 1.7; color: var(--ink-2); max-width: 620px; margin: -28px 0 48px; font-weight: 300; }
+  .beyond-lede em { font-style: normal; color: var(--ink-1); border-bottom: 1px solid var(--line-2); padding-bottom: 1px; }
   .ethos { margin: 24px 0 96px; padding: 56px 48px; border: 1px solid var(--line); border-radius: 8px; background: linear-gradient(180deg, var(--bg-1), var(--bg-0)); text-align: center; }
   .ethos .lock { font-size: 32px; margin-bottom: 18px; }
   .ethos h2 { font-size: clamp(24px, 3.4vw, 32px); font-weight: 600; letter-spacing: -.02em; margin: 0 0 16px; }
@@ -142,6 +151,8 @@
     <a class="brand" href="#top"><svg class="mark" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs><linearGradient id="navg" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#00d4c8"/><stop offset=".5" stop-color="#7c8cff"/><stop offset="1" stop-color="#ff6b8a"/></linearGradient></defs><rect width="32" height="32" rx="8" fill="url(#navg)"/><path d="M7 22 C12 10 20 10 25 22" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/></svg>Kinet</a>
     <div class="links">
       <a href="#fit">Fit</a><a href="#soul">Soul</a><a href="#task">Task</a><a href="#brief">Brief</a>
+      <span class="navdiv"></span>
+      <a href="#desk">Aios</a><a href="#find">FlashFind</a><a href="#home">Morning</a><a href="#elf">Elf</a><a href="#study">Study</a>
       <span class="navdiv"></span>
       <div class="lang">
         <button data-l="zh-Hans" class="on">简</button>
@@ -255,6 +266,92 @@
 
   </section>
 
+  <!-- ══════════ BEYOND THE DAY ══════════ -->
+  <div class="beyond-head">
+    <div class="section-label" data-i18n="beyond_label"></div>
+    <h2 class="section-h" data-i18n="beyond_h"></h2>
+    <p class="beyond-lede" data-i18n="beyond_lede"></p>
+  </div>
+
+  <section class="products">
+
+    <article class="product" data-i="4" id="desk">
+      <div class="meta"><div class="num">05 · WORK</div><div class="time" data-i18n="btime_0"></div></div>
+      <div class="body">
+        <h3>KinetAios</h3>
+        <div class="role" data-i18n="brole_0"></div>
+        <p class="one-liner" data-i18n="bline_0"></p>
+        <p class="details" data-i18n="bdetail_0"></p>
+        <div class="chips"><span class="chip" data-i18n="bchip_0_0"></span><span class="chip" data-i18n="bchip_0_1"></span><span class="chip" data-i18n="bchip_0_2"></span></div>
+        <div class="links-row">
+          <a class="site" href="https://phinn.github.io/KinetAiosMac/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.5 2.7 2.5 15.3 0 18M12 3c-2.5 2.7-2.5 15.3 0 18"/></svg><span data-i18n="cta_site"></span></a>
+          <span class="soon" data-i18n="cta_soon"></span>
+        </div>
+      </div>
+    </article>
+
+    <article class="product" data-i="5" id="find">
+      <div class="meta"><div class="num">06 · FIND</div><div class="time" data-i18n="btime_1"></div></div>
+      <div class="body">
+        <h3>KinetFlashFind</h3>
+        <div class="role" data-i18n="brole_1"></div>
+        <p class="one-liner" data-i18n="bline_1"></p>
+        <p class="details" data-i18n="bdetail_1"></p>
+        <div class="chips"><span class="chip" data-i18n="bchip_1_0"></span><span class="chip" data-i18n="bchip_1_1"></span><span class="chip" data-i18n="bchip_1_2"></span></div>
+        <div class="links-row">
+          <a class="site" href="https://phinn.github.io/KinetFlashFind/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.5 2.7 2.5 15.3 0 18M12 3c-2.5 2.7-2.5 15.3 0 18"/></svg><span data-i18n="cta_site"></span></a>
+          <span class="soon" data-i18n="cta_soon"></span>
+        </div>
+      </div>
+    </article>
+
+    <article class="product" data-i="6" id="home">
+      <div class="meta"><div class="num">07 · HOME</div><div class="time" data-i18n="btime_2"></div></div>
+      <div class="body">
+        <h3>KinetMorning</h3>
+        <div class="role" data-i18n="brole_2"></div>
+        <p class="one-liner" data-i18n="bline_2"></p>
+        <p class="details" data-i18n="bdetail_2"></p>
+        <div class="chips"><span class="chip" data-i18n="bchip_2_0"></span><span class="chip" data-i18n="bchip_2_1"></span><span class="chip" data-i18n="bchip_2_2"></span></div>
+        <div class="links-row">
+          <a class="site" href="https://phinn.github.io/KinetMorning/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.5 2.7 2.5 15.3 0 18M12 3c-2.5 2.7-2.5 15.3 0 18"/></svg><span data-i18n="cta_site"></span></a>
+          <span class="soon" data-i18n="cta_soon"></span>
+        </div>
+      </div>
+    </article>
+
+    <article class="product" data-i="7" id="elf">
+      <div class="meta"><div class="num">08 · COMPANION</div><div class="time" data-i18n="btime_3"></div></div>
+      <div class="body">
+        <h3>KinetElf</h3>
+        <div class="role" data-i18n="brole_3"></div>
+        <p class="one-liner" data-i18n="bline_3"></p>
+        <p class="details" data-i18n="bdetail_3"></p>
+        <div class="chips"><span class="chip" data-i18n="bchip_3_0"></span><span class="chip" data-i18n="bchip_3_1"></span><span class="chip" data-i18n="bchip_3_2"></span></div>
+        <div class="links-row">
+          <a class="cta" href="https://apps.apple.com/app/id6807457522" target="_blank" rel="noopener"><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.3-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.5z"/></svg>App Store</a>
+          <a class="site" href="https://phinn.github.io/KinetElf/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.5 2.7 2.5 15.3 0 18M12 3c-2.5 2.7-2.5 15.3 0 18"/></svg><span data-i18n="cta_site"></span></a>
+        </div>
+      </div>
+    </article>
+
+    <article class="product" data-i="8" id="study">
+      <div class="meta"><div class="num">09 · FAMILY</div><div class="time" data-i18n="btime_4"></div></div>
+      <div class="body">
+        <h3>KinetStudy</h3>
+        <div class="role" data-i18n="brole_4"></div>
+        <p class="one-liner" data-i18n="bline_4"></p>
+        <p class="details" data-i18n="bdetail_4"></p>
+        <div class="chips"><span class="chip" data-i18n="bchip_4_0"></span><span class="chip" data-i18n="bchip_4_1"></span><span class="chip" data-i18n="bchip_4_2"></span></div>
+        <div class="links-row">
+          <a class="cta" href="https://apps.apple.com/app/id6797004663" target="_blank" rel="noopener"><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.3-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.5z"/></svg>App Store</a>
+          <a class="site" href="https://phinn.github.io/KinetStudy/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.5 2.7 2.5 15.3 0 18M12 3c-2.5 2.7-2.5 15.3 0 18"/></svg><span data-i18n="cta_site"></span></a>
+        </div>
+      </div>
+    </article>
+
+  </section>
+
   <!-- ══════════ ETHOS ══════════ -->
   <section class="ethos">
     <div class="lock">🔒</div>
@@ -280,7 +377,7 @@
 const I = {
   "zh-Hans": {
     h1:"一个人的完整一天。",
-    lede:"这不是四个产品的清单。<br>是 <em>一条</em> 从清晨到深夜、再回到清晨的路径。",
+    lede:"这不是九个产品的清单。<br>是 <em>一条</em> 从清晨到深夜、再回到清晨的路径——和路径之外的日子。",
     products_label:"四个产品，一条路径", products_h:"把一天过完。",
     time_0:"清晨", time_1:"午后", time_2:"傍晚", time_3:"深夜",
     role_0:"身体 — 先把身体打开", role_1:"心理 — 给情绪一个出口", role_2:"任务 — 把今天最重要的三件事做了", role_3:"会议 — 把今天没白开",
@@ -297,11 +394,27 @@ const I = {
     ethos_p:"Kinet 的四个产品，没有账号、没有上传、没有谁在后台看你的一天。身体的数据、心理的话、今天的任务、会议的录音——<strong>都只属于你</strong>。",
     closing_p:"一个人要撑过一天，需要的不是更多 app。<br>是 <span class='grad'>四个真正愿意用</span> 的东西。",
     signoff:"<strong>Kinet</strong> · 一个人的日常系统 · 2026",
-    cta_site:"官网"
+    cta_site:"官网",
+    cta_soon:"即将上线",
+    beyond_label:"一天之外", beyond_h:"日子不止一天。",
+    beyond_lede:"白天的路径之外，还有五个 —— <em>把日子其余的部分接住</em>：工作、查找、家人、陪伴、学习。同样的原则：不联网也能用，数据不出设备。",
+    btime_0:"工位", btime_1:"指尖", btime_2:"家", btime_3:"心口", btime_4:"书桌",
+    brole_0:"工作台 — AI 干活，你说了算", brole_1:"查找 — 全盘文件，一秒到手", brole_2:"家人 — 一声平安，远程可见", brole_3:"陪伴 — 会长大的人工智能精灵", brole_4:"学习 — 错题有人管，家长不瞎猜",
+    bline_0:"<em>本机运行</em>的多引擎 AI 工作站。", bline_1:"<em>输入即到达</em>的全盘搜索。", bline_2:"一次打卡，<em>全家安心</em>。", bline_3:"口袋里<em>会回应你</em>的精灵。", bline_4:"拍一张照，<em>错题自动进本</em>。",
+    bdetail_0:"Direct、Claude Code、Codex 多引擎在一个窗口，长期记忆跨引擎跟随，27 个插件与 MCP 随叫随到。<strong>模型是你的，数据在盘上</strong>，没有中间人。开源。",
+    bdetail_1:"自建索引，毫秒级响应，<strong>Spotlight 搜不到的隐藏文件也能找到</strong>。FSEvents 实时同步，新建、删除、改名即刻生效。索引只存在你的机器上。",
+    bdetail_2:"给父母的打卡 app：一次点击报平安，绑定家人远程可见。<strong>到了时间没打卡，立刻提醒</strong>。无账号、无广告、无追踪，同步走你自己的 iCloud。",
+    bdetail_3:"住在灵动岛上的 AI 精灵，有性格、有心情、有记忆。聊天、写日记、天天记得你。<strong>离线引擎永久免费</strong>，云端大脑可选自配，对话默认不出设备。",
+    bdetail_4:"给家长的作业批改助手：拍一张照，AI 逐题判对错、讲思路，<strong>错题自动归档进错题本</strong>，按科目和知识点整理，随时重做。薄弱点看得见，练习不瞎猜。",
+    bchip_0_0:"多引擎", bchip_0_1:"跨引擎记忆", bchip_0_2:"开源",
+    bchip_1_0:"毫秒级搜索", bchip_1_1:"实时索引", bchip_1_2:"隐藏文件",
+    bchip_2_0:"一键打卡", bchip_2_1:"漏卡提醒", bchip_2_2:"iCloud 同步",
+    bchip_3_0:"灵动岛", bchip_3_1:"养成互动", bchip_3_2:"离线引擎",
+    bchip_4_0:"拍照批改", bchip_4_1:"错题本", bchip_4_2:"学情报告"
   },
   "zh-Hant": {
     h1:"一個人的完整一天。",
-    lede:"這不是四個產品的清單。<br>是 <em>一條</em> 從清晨到深夜、再回到清晨的路徑。",
+    lede:"這不是九個產品的清單。<br>是 <em>一條</em> 從清晨到深夜、再回到清晨的路徑——和路徑之外的日子。",
     products_label:"四個產品，一條路徑", products_h:"把一天過完。",
     time_0:"清晨", time_1:"午後", time_2:"傍晚", time_3:"深夜",
     role_0:"身體 — 先把身體打開", role_1:"心理 — 給情緒一個出口", role_2:"任務 — 把今天最重要的三件事做了", role_3:"會議 — 把今天沒白開",
@@ -318,11 +431,27 @@ const I = {
     ethos_p:"Kinet 的四個產品，沒有帳號、沒有上傳、沒有誰在背景看你的一天。身體的數據、心理的話、今天的任務、會議的錄音——<strong>都只屬於你</strong>。",
     closing_p:"一個人要撐過一天，需要的不是更多 app。<br>是 <span class='grad'>四個真正願意用</span> 的東西。",
     signoff:"<strong>Kinet</strong> · 一個人的日常系統 · 2026",
-    cta_site:"官網"
+    cta_site:"官網",
+    cta_soon:"即將上線",
+    beyond_label:"一天之外", beyond_h:"日子不止一天。",
+    beyond_lede:"白天的路徑之外，還有五個 —— <em>把日子其餘的部分接住</em>：工作、查找、家人、陪伴、學習。同樣的原則：不連網也能用，資料不出裝置。",
+    btime_0:"工位", btime_1:"指尖", btime_2:"家", btime_3:"心口", btime_4:"書桌",
+    brole_0:"工作臺 — AI 幹活，你說了算", brole_1:"查找 — 全盤檔案，一秒到手", brole_2:"家人 — 一聲平安，遠端可見", brole_3:"陪伴 — 會長大的人工智慧精靈", brole_4:"學習 — 錯題有人管，家長不瞎猜",
+    bline_0:"<em>本機執行</em>的多引擎 AI 工作站。", bline_1:"<em>輸入即到達</em>的全盤搜尋。", bline_2:"一次打卡，<em>全家安心</em>。", bline_3:"口袋裡<em>會回應你</em>的精靈。", bline_4:"拍一張照，<em>錯題自動進本</em>。",
+    bdetail_0:"Direct、Claude Code、Codex 多引擎在一個視窗，長期記憶跨引擎跟隨，27 個外掛與 MCP 隨叫隨到。<strong>模型是你的，資料在碟上</strong>，沒有中間人。開源。",
+    bdetail_1:"自建索引，毫秒級回應，<strong>Spotlight 搜不到的隱藏檔案也能找到</strong>。FSEvents 即時同步，新建、刪除、改名即刻生效。索引只存在你的機器上。",
+    bdetail_2:"給父母的打卡 app：一次點擊報平安，綁定家人遠端可見。<strong>到了時間沒打卡，立刻提醒</strong>。無帳號、無廣告、無追蹤，同步走你自己的 iCloud。",
+    bdetail_3:"住在動態島上的 AI 精靈，有性格、有心情、有記憶。聊天、寫日記、天天記得你。<strong>離線引擎永久免費</strong>，雲端大腦可選自配，對話預設不出裝置。",
+    bdetail_4:"給家長的作業批改助手：拍一張照，AI 逐題判對錯、講思路，<strong>錯題自動歸檔進錯題本</strong>，按科目和知識點整理，隨時重做。弱點看得見，練習不瞎猜。",
+    bchip_0_0:"多引擎", bchip_0_1:"跨引擎記憶", bchip_0_2:"開源",
+    bchip_1_0:"毫秒級搜尋", bchip_1_1:"即時索引", bchip_1_2:"隱藏檔案",
+    bchip_2_0:"一鍵打卡", bchip_2_1:"漏卡提醒", bchip_2_2:"iCloud 同步",
+    bchip_3_0:"動態島", bchip_3_1:"養成互動", bchip_3_2:"離線引擎",
+    bchip_4_0:"拍照批改", bchip_4_1:"錯題本", bchip_4_2:"學情報告"
   },
   "en": {
     h1:"A complete day, for one.",
-    lede:"This isn't a list of four products.<br>It's <em>one</em> path — dawn to midnight, and back to dawn.",
+    lede:"This isn't a list of nine products.<br>It's <em>one</em> path — dawn to midnight, and back to dawn. Plus the rest of life.",
     products_label:"Four products, one path", products_h:"Finish the day.",
     time_0:"Morning", time_1:"Midday", time_2:"Evening", time_3:"Night",
     role_0:"Body — wake the body up first", role_1:"Mind — give your feelings a way out", role_2:"Focus — do today's three most important things", role_3:"Meetings — make today count",
@@ -339,11 +468,27 @@ const I = {
     ethos_p:"Kinet's four products need no account, send nothing, and nobody watches your day in the background. Your body's data, your mind's words, today's tasks, the meeting recordings — <strong>yours alone</strong>.",
     closing_p:"To get through a day, you don't need more apps.<br>You need <span class='grad'>four things you'll actually use</span>.",
     signoff:"<strong>Kinet</strong> · A daily system for one · 2026",
-    cta_site:"Website"
+    cta_site:"Website",
+    cta_soon:"Coming soon",
+    beyond_label:"Beyond the day", beyond_h:"A life is more than a day.",
+    beyond_lede:"Beyond the daylight path, five more — <em>holding the rest of life together</em>: work, finding, family, company, learning. Same principle: usable offline, data stays on your device.",
+    btime_0:"Desk", btime_1:"Fingertips", btime_2:"Home", btime_3:"Heart", btime_4:"Desk at night",
+    brole_0:"Workbench — AI does the work, you set the terms", brole_1:"Finding — every file, in under a second", brole_2:"Family — a daily check-in, visible from afar", brole_3:"Company — a pocket elf that grows on you", brole_4:"Learning — mistakes kept, parents not guessing",
+    bline_0:"A <em>local-first</em> multi-engine AI workstation.", bline_1:"Full-disk search that arrives <em>as you type</em>.", bline_2:"One check-in, <em>the whole family at ease</em>.", bline_3:"A pocket elf that <em>talks back</em>.", bline_4:"One photo, and <em>mistakes file themselves</em>.",
+    bdetail_0:"Direct, Claude Code, and Codex engines in one window. Long-term memory follows you across engines; 27 plugins and MCP on call. <strong>The models are yours, the data is on your disk</strong> — no middleman. Open source.",
+    bdetail_1:"Its own index, millisecond responses — <strong>finds hidden and system files Spotlight can't see</strong>. FSEvents keeps it live: create, delete, rename, instantly. The index lives on your machine only.",
+    bdetail_2:"A check-in app for aging parents: one tap to say \"I'm fine,\" bound family sees it from afar. <strong>Miss a check-in, and everyone is alerted at once</strong>. No accounts, no ads, no tracking — sync runs on your own iCloud.",
+    bdetail_3:"An AI elf living on the Dynamic Island, with personality, mood, and memory. Chat, journal, and it remembers every day. <strong>The offline engine is free forever</strong>; a cloud brain is optional, yours to configure. Chats stay on your device by default.",
+    bdetail_4:"A homework-grading assistant for parents: snap a photo and AI grades question by question, explaining each one. <strong>Wrong answers file themselves into the notebook</strong>, sorted by subject and knowledge point, ready to redo. Weak spots become visible; practice stops being guesswork.",
+    bchip_0_0:"Multi-engine", bchip_0_1:"Cross-engine memory", bchip_0_2:"Open source",
+    bchip_1_0:"Millisecond search", bchip_1_1:"Live index", bchip_1_2:"Hidden files",
+    bchip_2_0:"One-tap check-in", bchip_2_1:"Missed alerts", bchip_2_2:"iCloud sync",
+    bchip_3_0:"Dynamic Island", bchip_3_1:"Nurture & interact", bchip_3_2:"Offline engine",
+    bchip_4_0:"Photo grading", bchip_4_1:"Mistake notebook", bchip_4_2:"Progress reports"
   },
   "ja": {
     h1:"ひとりの、完全な一日。",
-    lede:"これは4つの製品のリストじゃない。<br>夜明けから深夜、そしてまた夜明けへ — <em>ひとつ</em>の道のりだ。",
+    lede:"これは9つの製品のリストじゃない。<br>夜明けから深夜、そしてまた夜明けへ — <em>ひとつ</em>の道のりと、その先の日々だ。",
     products_label:"4つの製品、ひとつの道のり", products_h:"一日を終わらせる。",
     time_0:"朝", time_1:"昼", time_2:"夕", time_3:"夜",
     role_0:"体 — まず体を起こす", role_1:"心 — 感情の逃げ道をつくる", role_2:"タスク — 今日の大事な3つをやる", role_3:"会議 — 今日を無駄にしない",
@@ -360,7 +505,23 @@ const I = {
     ethos_p:"Kinetの4つの製品は、アカウントもアップロードもなく、誰も裏であなたの一日を見ていない。体のデータ、心の言葉、今日のタスク、会議の録音 — <strong>すべてあなただけのもの</strong>。",
     closing_p:"一日を乗り切るのに、もっと多くのアプリはいらない。<br>必要なのは <span class='grad'>本当に使いたい4つ</span>。",
     signoff:"<strong>Kinet</strong> · ひとりの日常システム · 2026",
-    cta_site:"公式サイト"
+    cta_site:"公式サイト",
+    cta_soon:"近日公開",
+    beyond_label:"一日のその先", beyond_h:"一日だけが人生じゃない。",
+    beyond_lede:"昼の道のりの先に、もう5つ — <em>一日の他の部分を受け止める</em>:仕事、検索、家族、相棒、学び。原則は同じ:オフラインでも使え、データはデバイスから出ない。",
+    btime_0:"机", btime_1:"指先", btime_2:"家", btime_3:"心", btime_4:"夜の机",
+    brole_0:"仕事場 — AIが働き、条件は君が決める", brole_1:"検索 — 全ファイルを一秒で", brole_2:"家族 — ひとつの報告を、遠くから見守る", brole_3:"相棒 — 育つポケットの精霊", brole_4:"学び — 間違いは記録、親は当てずっぽうしない",
+    bline_0:"<em>ローカル完結</em>のマルチエンジンAIワークステーション。", bline_1:"<em>打った瞬間に届く</em>全文書検索。", bline_2:"ひとつのチェックイン、<em>家族みんなが安心</em>。", bline_3:"ポケットの<em>返事をしてくれる</em>精霊。", bline_4:"一枚撮れば、<em>間違いが自動でノートへ</em>。",
+    bdetail_0:"Direct、Claude Code、Codex — 複数エンジンをひとつの窓で。長期記憶はエンジンをまたいでついてくる。27のプラグインとMCPがすぐ呼べる。<strong>モデルは君のもの、データはディスクの中</strong>。仲介者なし。オープンソース。",
+    bdetail_1:"自前のインデックス、ミリ秒の応答 — <strong>Spotlightが見つけられない隠しファイルやシステムファイルも見つける</strong>。FSEventsで常時同期:作成・削除・改名、すべて即時。インデックスは君のマシンだけにある。",
+    bdetail_2:"親の見守りチェックインアプリ:ワンタップで「元気だよ」、繋いだ家族が遠くから見える。<strong>チェックインがなければ、すぐ全員に通知</strong>。アカウントも広告も追跡もなし — 同期は自分のiCloudで。",
+    bdetail_3:"Dynamic Islandに住むAI精霊。性格があって、気分があって、記憶がある。チャットも日記も、毎日のことを覚えている。<strong>オフラインエンジンはずっと無料</strong>、雲の頭脳は任意で自分のキーを。会話は初期設定でデバイスの中。",
+    bdetail_4:"親のための宿題採点アシスタント:一枚撮れば、AIが一問ずつ○×と解き方を説明。<strong>間違いは自動でノートに整理</strong>され、科目と単元ごとに、いつでもやり直し。苦手が見える化され、練習はもう当てずっぽうじゃない。",
+    bchip_0_0:"マルチエンジン", bchip_0_1:"エンジン横断記憶", bchip_0_2:"オープンソース",
+    bchip_1_0:"ミリ秒検索", bchip_1_1:"常時インデックス", bchip_1_2:"隠しファイル",
+    bchip_2_0:"ワンタップ報告", bchip_2_1:"未報告通知", bchip_2_2:"iCloud同期",
+    bchip_3_0:"Dynamic Island", bchip_3_1:"育成インタラクション", bchip_3_2:"オフラインエンジン",
+    bchip_4_0:"写真採点", bchip_4_1:"間違いノート", bchip_4_2:"学習レポート"
   }
 };
 function applyLang(l){
