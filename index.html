@@ -154,11 +154,11 @@
   <div class="row">
     <a class="brand" href="#top"><svg class="mark" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs><linearGradient id="navg" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#00d4c8"/><stop offset=".5" stop-color="#7c8cff"/><stop offset="1" stop-color="#ff6b8a"/></linearGradient></defs><rect width="32" height="32" rx="8" fill="url(#navg)"/><path d="M7 22 C12 10 20 10 25 22" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/></svg>Kinet</a>
     <div class="links">
-      <a href="#fit">Fit</a><a href="#soul">Soul</a><a href="#task">Task</a><a href="#brief">Brief</a>
-      <span class="navdiv"></span>
-      <a href="#desk">Aios</a><a href="#find">FlashFind</a><a href="#home">Morning</a><a href="#elf">Elf</a><a href="#study">Study</a>
-      <span class="navdiv"></span>
-      <a href="#disk">Disk</a><a href="#win">Window</a><a href="#dock">Dock</a><a href="#remote">Agent</a>
+      <a href="#sec-day" data-i18n="nav_day">A day</a>
+      <a href="#desk" data-i18n="nav_work">Work &amp; life</a>
+      <a href="#study" data-i18n="nav_learn">Learning</a>
+      <a href="#disk" data-i18n="nav_tools">Tools</a>
+      <a href="#remote" data-i18n="nav_agent">Agent</a>
       <span class="navdiv"></span>
       <div class="lang">
         <button data-l="zh-Hans" class="on">简</button>
@@ -337,7 +337,7 @@
     <p class="beyond-lede" data-i18n="beyond_lede"></p>
   </div>
 
-  <section class="products">
+  <section class="products" id="work">
 
     <article class="product" data-i="4" id="desk">
       <div class="meta"><div class="num">05 · WORK</div><div class="time" data-i18n="btime_0"></div></div>
@@ -470,6 +470,7 @@
 <script>
 const I = {
   "zh-Hans": {
+    nav_day:"一天", nav_work:"工作与生活", nav_learn:"学习", nav_tools:"工具", nav_agent:"智能体",
     h1:"一个人的完整一天。",
     lede:"这不是一堆产品的清单。<br>是 <em>一条</em> 从清晨到深夜、再回到清晨的路径——和路径之外的日子。",
     products_label:"四个产品，一条路径", products_h:"把一天过完。",
@@ -526,6 +527,7 @@ const I = {
     cta_repo:"开源仓库"
   },
   "zh-Hant": {
+    nav_day:"一天", nav_work:"工作與生活", nav_learn:"學習", nav_tools:"工具", nav_agent:"智慧代理",
     h1:"一個人的完整一天。",
     lede:"這不是一堆產品的清單。<br>是 <em>一條</em> 從清晨到深夜、再回到清晨的路徑——和路徑之外的日子。",
     products_label:"四個產品，一條路徑", products_h:"把一天過完。",
@@ -582,6 +584,7 @@ const I = {
     cta_repo:"開源倉庫"
   },
   "en": {
+    nav_day:"A day", nav_work:"Work &amp; life", nav_learn:"Learning", nav_tools:"Tools", nav_agent:"Agent",
     h1:"A complete day, for one.",
     lede:"This isn't a list of apps.<br>It's <em>one</em> path — dawn to midnight, and back to dawn. Plus the rest of life.",
     products_label:"Four products, one path", products_h:"Finish the day.",
@@ -638,6 +641,7 @@ const I = {
     cta_repo:"Source"
   },
   "ja": {
+    nav_day:"一日", nav_work:"仕事と暮らし", nav_learn:"学び", nav_tools:"ツール", nav_agent:"エージェント",
     h1:"ひとりの、完全な一日。",
     lede:"これはアプリのリストじゃない。<br>夜明けから深夜、そしてまた夜明けへ — <em>ひとつ</em>の道のりと、その先の日々だ。",
     products_label:"4つの製品、ひとつの道のり", products_h:"一日を終わらせる。",
