@@ -191,6 +191,8 @@ document.documentElement.setAttribute('data-theme',t);})();
   .closing .grad { background: var(--gradient); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; font-weight: 600; }
   .closing .signoff { font-size: 14px; color: var(--ink-3); margin-top: 40px; }
   .closing .signoff strong { color: var(--ink-1); font-weight: 600; }
+  footer a.mail { color: var(--ink-2); text-decoration: none; border-bottom: 1px solid var(--line-2); padding-bottom: 1px; transition: color .15s, border-color .15s; }
+  footer a.mail:hover { color: var(--ink-1); border-color: var(--ink-2); }
   footer { margin-top: 96px; padding-top: 32px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: 12px; color: var(--ink-3); font-family: var(--font-mono); letter-spacing: .04em; }
   footer .brand { color: var(--ink-2); }
 </style>
@@ -614,6 +616,7 @@ document.documentElement.setAttribute('data-theme',t);})();
   <footer>
     <div class="brand">© Kinet</div>
     <div>Designed for one person · All on-device</div>
+    <div><a class="mail" href="mailto:phinn@kinet.dev" data-i18n="contact"></a></div>
   </footer>
 
 </main>
@@ -648,6 +651,7 @@ const I = {
     ethos_h2:"四件事，全部在你的设备上。",
     ethos_p:"Kinet 的四个产品，没有账号、没有上传、没有谁在后台看你的一天。身体的数据、心理的话、今天的任务、会议的录音——<strong>都只属于你</strong>。",
     closing_p:"一个人要撑过一天，需要的不是更多 app。<br>是 <span class='grad'>四个真正愿意用</span> 的东西。",
+    contact:"联系我们:phinn@kinet.dev",
     signoff:"<strong>Kinet</strong> · 一个人的日常系统 · 2026",
     cta_site:"官网",
     cta_soon:"即将上线",
@@ -725,6 +729,7 @@ const I = {
     ethos_h2:"四件事，全部在你的裝置上。",
     ethos_p:"Kinet 的四個產品，沒有帳號、沒有上傳、沒有誰在背景看你的一天。身體的數據、心理的話、今天的任務、會議的錄音——<strong>都只屬於你</strong>。",
     closing_p:"一個人要撐過一天，需要的不是更多 app。<br>是 <span class='grad'>四個真正願意用</span> 的東西。",
+    contact:"聯絡我們:phinn@kinet.dev",
     signoff:"<strong>Kinet</strong> · 一個人的日常系統 · 2026",
     cta_site:"官網",
     cta_soon:"即將上線",
@@ -802,6 +807,7 @@ const I = {
     ethos_h2:"Four things, all on your device.",
     ethos_p:"Kinet's four products need no account, send nothing, and nobody watches your day in the background. Your body's data, your mind's words, today's tasks, the meeting recordings — <strong>yours alone</strong>.",
     closing_p:"To get through a day, you don't need more apps.<br>You need <span class='grad'>four things you'll actually use</span>.",
+    contact:"Contact: phinn@kinet.dev",
     signoff:"<strong>Kinet</strong> · A daily system for one · 2026",
     cta_site:"Website",
     cta_soon:"Coming soon",
@@ -879,6 +885,7 @@ const I = {
     ethos_h2:"4つのこと、すべてあなたのデバイスで。",
     ethos_p:"Kinetの4つの製品は、アカウントもアップロードもなく、誰も裏であなたの一日を見ていない。体のデータ、心の言葉、今日のタスク、会議の録音 — <strong>すべてあなただけのもの</strong>。",
     closing_p:"一日を乗り切るのに、もっと多くのアプリはいらない。<br>必要なのは <span class='grad'>本当に使いたい4つ</span>。",
+    contact:"お問い合わせ:phinn@kinet.dev",
     signoff:"<strong>Kinet</strong> · ひとりの日常システム · 2026",
     cta_site:"公式サイト",
     cta_soon:"近日公開",
