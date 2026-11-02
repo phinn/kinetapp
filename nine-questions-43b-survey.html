@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Nine Questions: Apple's 4.3(b) Survey — Full Answers (Chapter, Free)</title>
+<meta name="description" content="Apple's 9-question survey asks if you're a template factory. Full chapter from the 4.3 Survival Report: question-by-question survival plays, the 48-hour rhythm, and the reply that turns silence into signal.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The Nine Questions: How to Survive Apple's 4.3(b) Survey">
+<meta property="og:description" content="Question-by-question survival plays from a developer who recovered 21 rejected apps. Free full chapter — the complete report has all twelve rejection types.">
+<meta property="og:url" content="https://phinn.github.io/kinetapp/nine-questions-43b-survey.html">
+<link rel="canonical" href="https://phinn.github.io/kinetapp/nine-questions-43b-survey.html">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "The Nine Questions: How to Survive Apple's 4.3(b) Survey",
+  "description": "Apple's template-factory survey, question by question, from a developer who recovered 21 batch-rejected apps in three weeks.",
+  "author": {"@type": "Person", "name": "Phinn"},
+  "datePublished": "2026-11-02",
+  "keywords": "app store 4.3 rejection, 4.3(b) survey, resolution center, app store rejection appeal"
+}
+</script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  body { max-width: 720px; margin: 0 auto; padding: 48px 20px 80px; font: 17px/1.75 Georgia, 'Times New Roman', serif; color: #1d2333; background: #faf9f6; }
+  h1 { font-size: 2rem; line-height: 1.25; margin: 0 0 6px; letter-spacing: -.01em; }
+  h2 { font-size: 1.35rem; margin: 40px 0 12px; letter-spacing: -.01em; }
+  .kicker { font: 600 12px/1 system-ui; letter-spacing: .14em; text-transform: uppercase; color: #8a8474; margin-bottom: 14px; }
+  .meta { font: 14px/1.5 system-ui; color: #8a8474; margin-bottom: 36px; }
+  table { border-collapse: collapse; width: 100%; margin: 18px 0; font: 15px/1.6 system-ui; }
+  th, td { border: 1px solid #d8d4c8; padding: 9px 12px; text-align: left; vertical-align: top; }
+  th { background: #f0eee6; font-weight: 600; }
+  ol li, ul li { margin-bottom: 10px; }
+  blockquote { border-left: 3px solid #c9a227; margin: 22px 0; padding: 4px 0 4px 18px; font-style: italic; color: #4a4fum; color: #4a4f63; }
+  .note { background: #f0eee6; border: 1px solid #d8d4c8; border-radius: 8px; padding: 16px 20px; font: 15px/1.6 system-ui; margin: 26px 0; }
+  .cta { background: #fffdf5; border: 2px solid #c9a227; border-radius: 12px; padding: 24px 26px; margin: 44px 0 28px; font: 15px/1.8 system-ui; }
+  .cta strong { display: block; font-size: 17px; margin-bottom: 12px; color: #1d2333; }
+  .cta a { color: #9a6b00; font-weight: 600; }
+  footer { border-top: 1px solid #d8d4c8; margin-top: 48px; padding-top: 20px; font: 13px/1.6 system-ui; color: #8a8474; }
+  footer a { color: #6b7591; }
+  code { background: #f0eee6; border-radius: 4px; padding: 1px 6px; font-size: .9em; }
+</style>
+</head>
+<body>
+
+<div class="kicker">App Store Rejection Field Notes · Full Chapter</div>
+<h1>The Nine Questions: How to Survive Apple's 4.3(b) Survey</h1>
+<div class="meta">Chapter 3 of <em>The 4.3 Survival Report</em> · from a developer who got 21 apps batch-rejected in the same minute — and recovered all 21 in three weeks · November 2026</div>
+
+<p>The 4.3(a) batch rejection sometimes attaches a survey. The questions ask about shared code, shared personnel, marketing relationships between apps, and why the apps exist. The temptation is to lawyer up and minimize everything. The failure mode is different: <b>21 near-identical replies landing in Resolution Center are themselves proof of a template operation</b> — which is exactly what you're being accused of.</p>
+
+<h2>Question-by-question survival plays</h2>
+<table>
+  <tr><th style="width:30%">Question cluster</th><th>Survival play</th></tr>
+  <tr><td>Q1–Q3 · What does the app do / who is it for</td><td>Concrete mechanisms, not marketing. "User taps X, system does Y, stored in Z." One screenshot reference per claim.</td></tr>
+  <tr><td>Q4 · Did you develop it yourself?</td><td><b>Never lie here.</b> Approval decisions get revisited during account investigations; a discovered lie converts a recoverable 4.3 into a termination risk. Independent developer: say so plainly.</td></tr>
+  <tr><td>Q7 · Code shared across apps?</td><td>State <i>exactly</i> what is shared (a 210-line localization helper, standard scaffolding) and what is not (core logic per app). Precision reads as honesty; minimization reads as evasion.</td></tr>
+  <tr><td>Q8 · Third parties involved?</td><td>Same rule as Q4. "No agency. Built by one person."</td></tr>
+  <tr><td>Q9 · Cross-promotion between apps?</td><td>Disclose what exists, even if it's unflattering. An undisclosed mechanism found later costs more than the disclosure.</td></tr>
+</table>
+
+<h2>The rhythm that worked</h2>
+<ol>
+  <li><b>One app per 48 hours.</b> Not five in a day. Batch-sending identical replies at machine speed is machine-speed evidence against you.</li>
+  <li><b>Best app goes first.</b> A clean approval on your strongest app raises the odds for every thread behind it — and gives you a citable precedent: <i>"{App} passed review on {date}; the shared components in question are identical."</i></li>
+  <li><b>Draft, read end-to-end, then send.</b> Never send a first draft. Once it's in the thread, it's evidence.</li>
+  <li><b>End every reply with one sentence:</b> <i>"If anything still reads as spam, please identify the specific triggering element."</i> It converts silence into actionable signal, and reviewers do answer it.</li>
+  <li><b>Freeze all new submissions while any 4.3 is unresolved.</b> Every new submission during a flag is another file in the case file.</li>
+</ol>
+
+<blockquote>Result: 21/21 recovered, roughly three weeks from the first honest reply to the final reinstatement.</blockquote>
+
+<h2>What the survey is actually testing</h2>
+<p>Apple isn't grading your answers. It's grading whether <b>twenty-one answers look like one person or one template</b>. Consistency of facts across replies, variance in phrasing, unprompted specifics (file counts, dates, API names) — these read as human. Identical paragraph structures, hedged passive voice, missing numbers — these read as mass production. Write each reply as if a different reviewer will cross-read it against the others, because they will.</p>
+
+<div class="note">
+  This chapter is free. The complete <strong>4.3 Survival Report — $19</strong> covers both strike timelines, the full controlled experiment matrix (three queues, one variable), question-by-question answer drafts you can adapt, and the pacing budget that has kept the account clean since.
+</div>
+
+<div class="cta">
+<strong>Get the complete playbook</strong>
+📄 <a href="https://payhip.com/b/qjIs9">The 4.3 Survival Report — $19</a>: both strike timelines, the full experiment matrix, survey answer drafts for every question cluster<br><br>
+✉️ <a href="https://payhip.com/b/qCBdX">12 Rejection Reply Templates — $7</a>: Resolution Center skeletons for 2.1, 4.2, 4.3, 3.1.1, 5.1.1 and more<br><br>
+🆓 <a href="https://payhip.com/b/FqhgR">Free 15-point pre-submission checklist</a> — start here if you're not rejected yet and want to stay that way
+</div>
+
+<p>The full context — why batch 4.3 fires, the controlled experiment, the relapse post-mortem — is in the <a href="/kinetapp/app-store-4-3-rejection.html">companion article</a>. If you're currently in a batch-rejection hole: lead with your best app, one every 48 hours, and rewrite every answer per app.</p>
+
+<footer>
+<p><em>Not legal advice. All numbers verifiable in App Store Connect and Resolution Center records.</em></p>
+<p><strong>Related searches this page answers:</strong> 4.3(b) survey questions · app store template factory survey · how to answer app store 9 question survey · 4.3(a) design spam recovery · resolution center best practices · app store rejection survey answers</p>
+<p><a href="/">← Kinet · iOS field notes</a> · <a href="/kinetapp/app-store-4-3-rejection.html">4.3 full post-mortem →</a></p>
+</footer>
+
+</body>
+</html>
