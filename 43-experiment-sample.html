@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The 4.3 Experiment: Rate, Not Fingerprints — Free Sample Chapter</title>
+<meta name="description" content="Free chapter from The 4.3 Survival Report: a controlled experiment across three submission queues on the same account proves that App Store guideline 4.3 is triggered by submission velocity and account profile — not code similarity. Includes the rate budget table that prevents relapse.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The 4.3 Experiment: Rate, Not Fingerprints (Free Sample Chapter)">
+<meta property="og:description" content="Three queues, one account, same tooling: the only variable that predicted who got 4.3'd was submission velocity. Read the evidence, then get the full survival playbook.">
+<meta property="og:url" content="https://phinn.github.io/kinetapp/43-experiment-sample.html">
+<link rel="canonical" href="https://phinn.github.io/kinetapp/43-experiment-sample.html">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "The 4.3 Experiment: Rate, Not Fingerprints — Free Sample Chapter",
+  "description": "A controlled experiment across three submission queues on the same Apple developer account shows 4.3 batch rejections are selected by submission velocity, not code similarity. Free sample chapter of The 4.3 Survival Report.",
+  "author": {"@type": "Person", "name": "Junjie Shen"},
+  "datePublished": "2026-11-02",
+  "keywords": "app store 4.3 rejection experiment, guideline 4.3(a) trigger, 4.3(b) survey, submission velocity, app store review rate limit",
+  "url": "https://phinn.github.io/kinetapp/43-experiment-sample.html"
+}
+</script>
+<style>
+:root{--ink:#1a1a1a;--mut:#555;--accent:#0a6ea8;--line:#e4e0d6;--paper:#faf8f3;--card:#fff}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.75 Georgia,"Times New Roman",serif}
+main{max-width:720px;margin:0 auto;padding:48px 24px 80px}
+header.hero{border-bottom:3px solid var(--ink);padding-bottom:24px;margin-bottom:36px}
+.kicker{font:600 12px/1 -apple-system,system-ui,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin:0 0 14px}
+h1{font:700 32px/1.25 -apple-system,system-ui,sans-serif;letter-spacing:-.01em;margin:0 0 14px}
+.lede{font-style:italic;color:var(--mut);margin:0}
+h2{font:700 22px/1.3 -apple-system,system-ui,sans-serif;margin:44px 0 14px;padding-top:8px}
+p{margin:0 0 16px}
+strong{color:#000}
+ol,ul{margin:0 0 16px;padding-left:26px}
+li{margin-bottom:10px}
+table{width:100%;border-collapse:collapse;margin:20px 0;font:14px/1.6 -apple-system,system-ui,sans-serif}
+th,td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top;background:var(--card)}
+th{background:#f1ede4;font-weight:600}
+blockquote{margin:24px 0;padding:16px 22px;border-left:4px solid var(--accent);background:var(--card);font-size:17px}
+blockquote p{margin:0}
+a{color:var(--accent)}
+code{font:13px/1.5 ui-monospace,Menlo,monospace;background:#f1ede4;padding:2px 6px;border-radius:4px}
+.cta{margin:28px 0;padding:20px 22px;background:var(--card);border:1px solid var(--line);border-radius:10px;font:15px/1.7 -apple-system,system-ui,sans-serif}
+.cta strong{display:block;margin-bottom:8px;font-size:16px}
+.sample-note{font:600 12px/1 -apple-system,system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#8a6d1f;background:#f6efdc;border:1px solid #e5d9ae;border-radius:8px;padding:10px 14px;margin:0 0 28px}
+footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);font:13px/1.6 -apple-system,system-ui,sans-serif;color:var(--mut)}
+</style>
+</head>
+<body>
+<main>
+<header class="hero">
+<p class="kicker">Free sample · The 4.3 Survival Report ($19)</p>
+<h1>The Experiment: Rate, Not Fingerprints</h1>
+<p class="lede">This is one chapter from the full report. If you've been hit by guideline 4.3(a)/(b) and the nine-question survey, the rest of the report covers the survey answers, appeal templates, and recovery timeline in the same level of detail.</p>
+</header>
+
+<p class="sample-note">Sample chapter — abridged from the full report. All data points intact.</p>
+
+<h2>The experiment: rate, not fingerprints</h2>
+
+  <p>This is the most valuable section of the report, and the third row deserves to be read twice. During the incident window, three queues of submissions moved through review on the same account, at the same time, from the same person, with the same tooling:</p>
+
+  <table>
+    <tr>
+      <th>Queue</th><th>Window</th><th>Outcome</th><th>What it controls for</th>
+    </tr>
+    <tr>
+      <td>15 first-time submissions</td>
+      <td>May – Sep, <b>before</b> the flag</td>
+      <td><b>All passed clean</b></td>
+      <td>Same shared scaffolding, same localization pipeline, same toolchain — before the rate tripwire</td>
+    </tr>
+    <tr>
+      <td>Version updates to 2 flagship apps</td>
+      <td><b>During</b> the flag</td>
+      <td><b>Passed, one by one</b></td>
+      <td>Same account, same templates, flag active — updates still flowed</td>
+    </tr>
+    <tr>
+      <td>1 brand-new app, unrelated category</td>
+      <td><b>During</b> the flag</td>
+      <td><b>4.3 + 4.2.6 + nine questions anyway</b></td>
+      <td>2,030 lines of code (largest in the account), zero code shared with the affected family, completely different category</td>
+    </tr>
+  </table>
+
+  <p>Read row three again. A brand-new app with <b>no code similarity to anything in the account</b> — different category, biggest codebase, clean design — still got the batch rejection and the survey. Whatever the rejection text says about "similar apps," the trigger that selects <i>who</i> gets surveyed is account-level submission <b>rate</b>. Code inspection is the aftermath, not the trigger.</p>
+
+  <div class="note">Corollary that saves you months of wrong work: refactoring your code to be "more different" does nothing for an active 4.3 flag. What changes outcomes during a flag is (1) time, (2) reply quality in Resolution Center, (3) not adding new submissions to the pile. Differentiation matters for <i>never</i> triggering it again — that's the storefront portrait, §"What the portrait looked like".</div>
+
+  <h2>What "account-level" actually means</h2>
+  <p>When a batch lands at 05:25 with identical timestamps, you are not dealing with 21 independent reviewers. Three things change on an account-level flag:</p>
+  <ol>
+    <li><b>Every new submission gets manual screening</b> — including updates to previously-approved apps. Expect slower review on everything.</li>
+    <li><b>Old submissions can be held hostage</b> — two apps from Sep 19 sat in WAITING_FOR_REVIEW for a month while the flag burned. They were never explicitly rejected. They were just... held.</li>
+    <li><b>The survey is the exit interview.</b> The nine questions are not information gathering for its own sake — your answers get compared against each other across apps, and against what the reviewer can see on the storefront. Consistency is scored.</li>
+  </ol>
+</div>
+
+<!-- NINE QUESTIONS -->
+<div class="pg">
+  <h2>The nine questions: how to survive them</h2>
+  <p>The 4.3(a) batch rejection attaches a survey. The questions ask about shared code, shared personnel, marketing relationships between apps, and why the apps exist. The temptation is to lawyer up and minimize everything. The failure mode is different: <b>21 near-identical replies landing in Resolution Center are themselves proof of a template operation</b> — which is exactly what you're being accused of.</p>
+
+  <table>
+    <tr><th style="width:30%">Question cluster</th><th>Survival play</th></tr>
+    <tr><td>Q1–Q3 · What does the app do / who is it for</td><td>Concrete mechanisms, not marketing. "User taps X, system does Y, stored in Z." One screenshot reference per claim.</td></tr>
+    <tr><td>Q4 · Did you develop it yourself?</td><td><b>Never lie here.</b> Approval decisions get revisited during account investigations; a discovered lie converts a recoverable 4.3 into a termination risk. Independent developer: say so plainly.</td></tr>
+    <tr><td>Q7 · Code shared across apps?</td><td>State <i>exactly</i> what is shared (a 210-line localization helper, standard scaffolding) and what is not (core logic per app). Precision reads as honesty; minimization reads as evasion.</td></tr>
+    <tr><td>Q8 · Third parties involved?</td><td>Same rule as Q4. "No agency. Built by one person."</td></tr>
+    <tr><td>Q9 · Cross-promotion between apps?</td><td>Disclose what exists, even if it's unflattering. An undisclosed mechanism found later costs more than the disclosure.</td></tr>
+  </table>
+
+  <h2>The rhythm that worked</h2>
+  <ol>
+    <li><b>One app per 48 hours.</b> Not five in a day. Batch-sending identical replies at machine speed is machine-speed evidence against you.</li>
+    <li><b>Best app goes first.</b> A clean approval on your strongest app raises the odds for every thread behind it — and gives you a citable precedent: "{App} passed review on {date}; the shared components in question are identical."</li>
+    <li><b>Draft, read end-to-end, then send.</b> Never send a first draft. Once it's in the thread, it's evidence.</li>
+    <li><b>End every reply with one sentence:</b> <i>"If anything still reads as spam, please identify the specific triggering element."</i> It converts silence into actionable signal, and reviewers do answer it.</li>
+    <li><b>Freeze all new submissions while any 4.3 is unresolved.</b> Every new submission during a flag is another file in the case file.</li>
+  </ol>
+
+  <div class="note">Full copy-paste reply skeletons for all twelve rejection types — including the nine questions question-by-question — are Field Guide #02 (12 Rejection Reply Templates).</div>
+</div>
+
+<!-- SECOND STRIKE -->
+<div class="pg">
+  <h2>The second strike (the section nobody else can write)</h2>
+  <p>The first recovery worked. Apps cleared, the flag lifted, revenue resumed. And then — this is the confession part — the account went right back to burst submissions. Six more apps, fast, in mid-October.</p>
+  <p>The second strike was worse in every way that matters:</p>
+  <ul>
+    <li><b>Six apps frozen outright</b> — not rejection-with-survey, but removal from sale pending review, with a cooldown measured in weeks</li>
+    <li><b>No negotiation path.</b> The first time, the survey gave you a channel. The second time, the channel narrows: the record already shows you were told.</li>
+    <li><b>The defense from strike one is gone.</b> First time, "I didn't understand the rate sensitivity" was at least arguable. Second time, the account <i>is</i> the argument. The risk model does not award credit for prior recovery — it only reads the current window.</li>
+  </ul>
+
+  <div class="note">The meta-lesson, stated once: the dangerous phase is not the strike. It's the two weeks after recovery, when the pipeline is full, the muscle memory is hot, and the account feels immune because it just survived. Write the rate budget down <i>during</i> the incident, while the pain is load-bearing.</div>
+
+  <h2>Extended Review = yellow card</h2>
+  <p>Easy to miss: some apps got the older-format 4.3(a) rejection with this warning attached — <i>resubmitting similar apps may extend review times, and repeated violations may result in account termination.</i></p>
+  <p>Translation: that app (and the account) is on a watchlist. The play that worked: <b>do not rush a resubmit</b>. Fix the real underlying issue (in this case: document the Accessibility API usage rather than remove it), write the fix into the Resolution Center thread so there's a paper trail, and let the cooldown run before touching the app again. Apps with 2+ rejections leave the pipeline world and enter the hand-crafted world — one at a time, with context in every reply.</p>
+</div>
+
+<!-- HARD RULES -->
+<div class="pg">
+  <h2>The rate budget: rules with bodies on them</h2>
+  <table>
+    <tr><th style="width:12%">Rule</th><th>What it means</th></tr>
+    <tr><td><b>5 / 8</b></td><td>Rolling 14-day new-app submissions ≤ 5; rolling 30-day ≤ 8. Check your submission log before every new-app upload. Exceeding it isn't a risk — it's a coin flip with your account as the stake.</td></tr>
+    <tr><td><b>No name families</b></td><td>Zero rhyming-suffix or shared-pattern naming across a portfolio. Test: if a reviewer lines up your app names in search results, what conclusion do they reach in five seconds?</td></tr>
+    <tr><td><b>Pages are fingerprints</b></td><td>Every support URL gets its own h1, its own structure, its own copy. A shared template across 24 apps is the loudest possible factory signal — and it's visible without installing anything.</td></tr>
+    <tr><td><b>Zero trademarks</b></td><td>Title, subtitle, keywords: no competitor names, no platform-adjacent brands. 4.1(c) Copycats hits <i>updates to old apps too</i> — a routine update got pulled back for a keyword added months earlier.</td></tr>
+    <tr><td><b>48h survey rhythm</b></td><td>One reply per 48h during batch rejections, strongest app first, freeze everything else until it clears.</td></tr>
+    <tr><td><b>Freeze on flag</b></td><td>Any unresolved 4.3 on the account = no new submissions of any kind. Updates to clean apps are the only gray zone — treat even those as slow.</td></tr>
+  </table>
+
+  
+
+<div class="cta">
+<strong>Read the rest of the playbook</strong>
+The full <em>4.3 Survival Report</em> ($19) includes: the complete nine-question survey answer set that got 21 apps reinstated, the appeal-letter templates for 4.3(a) vs 4.3(b), the relapse-prevention pacing calendar, and what Apple's resolution center actually responds to.
+<a href="https://payhip.com/b/qjIs9">Get the full report →</a>
+</div>
+
+<footer>
+Part of the <a href="https://phinn.github.io/kinetapp/app-store-4-3-rejection.html">4.3 field report</a> · <a href="https://phinn.github.io/kinetapp/index.html">More tools &amp; guides</a>
+</footer>
+</main>
+</body>
+</html>
