@@ -74,13 +74,17 @@ Softpedia 特色字段:平台选 **macOS**,分类按站内分类树选,「App St
 
 ---
 
-## 五、人工执行清单(按序,约 40 分钟)
+## 五、执行清单(2026-11-05 更新)
 
-1. [ ] MacUpdate:https://member.macupdate.com → Sign in → **Email me a Quick Sign In Link**(phinn@outlook.com)→ 收邮件点链接登录
-2. [ ] MacUpdate:逐个提交 4 个 mac app(模板照抄 § 二)
-3. [ ] AlternativeTo:登录(试已有账号/magic link)→ 按 § 三打 11 个大 app 的 alternative(每个 30 秒)
-4. [ ] Softpedia:过 CF 盾 → /dynamic/submit-software.shtml → 4 个 mac(§ 二文案复用);它本会自动爬 App Store,优先级最低
-5. ~~TAAFT~~:付费站一律不投(定案)
+1. [x] MacUpdate:**4 个 mac app 已于 2026-11-05 全部提交**(登录态下 agent 直提,13 字段+1024px 官方图标,回执 "review within 10 days by email")→ 待审,勿重复提
+2. [ ] AlternativeTo:登录(试已有账号/magic link)→ 按 § 三打 11 个大 app 的 alternative(每个 30 秒)
+3. [ ] Softpedia:过 CF 盾 → /dynamic/submit-software.shtml → 4 个 mac(§ 二文案复用);它本会自动爬 App Store,优先级最低
+4. ~~TAAFT~~:付费站一律不投(定案)
+
+### MacUpdate 提交经验(复用)
+- 入口 `member.macupdate.com/content/submit`,无 captcha;表单字段:app_name/download_url/purchase_url/version_number/developer_name/product_url/developer_support_url/app_price(纯数字)/app_short_description/app_description/app_version_changes/app_system_requirements/developer_comment + logo/screenshots(input[type=file])
+- 图标源:iTunes lookup `artworkUrl512` 把 `512x512bb.png` 换成 `1024x1024bb.png` 下载(1024×1024 合规);React drag-drop 组件 `input.files` 回读恒空,**成功判据=UI 出现 "xxx KB" 预览字样**
+- 价格填纯数字 `6.99`;developer_name 用 App Store 法人名「俊杰 沈」;提交成功特征=页面出现 "submitted!"
 
 ## 六、验收口径
 
