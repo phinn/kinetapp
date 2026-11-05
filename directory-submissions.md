@@ -12,7 +12,7 @@
 | **MacUpdate** | 免费 | 无 CF 墙 | 登录后 https://www.macupdate.com/content/submit | ✅ 首批人工执行,难度最低 |
 | **AlternativeTo** | 免费 | Cloudflare | 需注册+邮箱验证;登录后右上角用户菜单 → **Suggest new application**;给现有 app 加对手走 Contribute → Suggest Alternatives | ✅ 第二批,审核有 backlog |
 | **Softpedia** | 免费 | Cloudflare(403) | https://www.softpedia.com/dynamic/submit-software.shtml | ✅ 第三批,过盾后人工填表 |
-| **TAAFT** (theresanaiforthat) | **付费 $49 起**(50-100 点击/周) | Cloudflare | /launch/ 需登录+付费套餐 | ⚠️ 不自动投;$49×8 个 AI app ≈ $392,先投 1 个(M5Chat)测转化再定 |
+| **TAAFT** (theresanaiforthat) | **付费 $49 起**(50-100 点击/周) | Cloudflare | /launch/ 需登录+付费套餐 | ❌ 收费站一律不投(2026-11-05 定案),8 AI app≈$392 无验证 ROI,不碰 |
 
 关键事实:
 - MacUpdate 全站搜索 **零 kinet 收录** → 4 个 mac app 全是新提,无认领环节
@@ -79,10 +79,11 @@ Softpedia 特色字段:平台选 **macOS**,分类按站内分类树选,「App St
 1. [ ] MacUpdate:https://member.macupdate.com → Sign in → **Email me a Quick Sign In Link**(phinn@outlook.com)→ 收邮件点链接登录
 2. [ ] MacUpdate:逐个提交 4 个 mac app(模板照抄 § 二)
 3. [ ] AlternativeTo:登录(试已有账号/magic link)→ 按 § 三打 11 个大 app 的 alternative(每个 30 秒)
-4. [ ] Softpedia:过 CF 盾 → /dynamic/submit-software.shtml → 4 个 mac(§ 二文案复用)
-5. [ ] (决策点)TAAFT:$49 只投 M5Chat 测水,2 周看点击再定是否扩
+4. [ ] Softpedia:过 CF 盾 → /dynamic/submit-software.shtml → 4 个 mac(§ 二文案复用);它本会自动爬 App Store,优先级最低
+5. ~~TAAFT~~:付费站一律不投(定案)
 
 ## 六、验收口径
 
 - 一周后逐站搜 `kinet` / 各产品名,记录收录 URL → 记进 promo 面板渠道清单
-- KinetAios 官网 analytics 看 directory 站 referrer 变化(基线:11-03 全站 313 uv)
+- 官网 analytics 看 directory 站 referrer 变化(基线:11-03 全站 313 uv)
+- ~~TAAFT~~ **收费不投**(2026-11-05 用户定案:收费的都不投,连同未来任何 paid listing 通道)
