@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kinet Apps — 20 apps for iPhone, iPad & Mac</title>
+<meta name="description" content="All Kinet apps in one place: AI meeting notes, on-device AI chat, focus tools, Mac utilities, health and reading apps. Every app respects your privacy — no accounts, no tracking.">
+<link rel="canonical" href="https://phinn.github.io/kinetapp/apps.html">
+<style>
+  :root {
+    --ink-1: #f4f5f8; --ink-2: #b6bdce; --ink-3: #6b7591; --ink-4: #3a4258;
+    --bg-0: #07080d; --bg-1: #0e1018; --bg-2: #161924;
+    --line: #1f2330; --line-2: #2b3142;
+    --nav-bg: rgba(7,8,13,.72);
+    --c-1: #00d4c8; --c-2: #7c8cff; --c-3: #ffb547; --c-4: #ff6b8a; --c-5: #3ecf8e;
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Hiragino Sans', sans-serif;
+    --font-mono: 'SF Mono', 'JetBrains Mono', Menlo, monospace;
+  }
+  html[data-theme="light"] {
+    --ink-1: #23252c; --ink-2: #55596a; --ink-3: #8b8fa0; --ink-4: #c3c6d1;
+    --bg-0: #faf9f6; --bg-1: #ffffff; --bg-2: #f2f0ea;
+    --line: #e7e4dc; --line-2: #d8d4c9;
+    --nav-bg: rgba(250,249,246,.8);
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body { background:var(--bg-0); color:var(--ink-1); font-family:var(--font-sans); line-height:1.6; -webkit-font-smoothing:antialiased; transition:background .3s,color .3s; }
+  a { color:inherit; }
+  nav { position:sticky; top:0; z-index:50; background:var(--nav-bg); backdrop-filter:blur(12px); border-bottom:1px solid var(--line); }
+  nav .row { max-width:1080px; margin:0 auto; padding:14px 24px; display:flex; align-items:center; justify-content:space-between; }
+  .brand { display:flex; align-items:center; gap:9px; font-weight:600; letter-spacing:.02em; text-decoration:none; font-size:15px; }
+  .brand .mark { width:22px; height:22px; }
+  nav .links { display:flex; gap:20px; align-items:center; font-size:13.5px; }
+  nav .links a { text-decoration:none; color:var(--ink-2); transition:color .15s; }
+  nav .links a:hover { color:var(--ink-1); }
+  .lang { display:flex; gap:4px; }
+  .lang button { border:1px solid var(--line-2); background:transparent; color:var(--ink-2); font-family:inherit; font-size:12px; padding:3px 9px; border-radius:6px; cursor:pointer; transition:all .15s; }
+  .lang button.on { color:var(--ink-1); border-color:var(--ink-3); background:var(--bg-2); }
+  .lang button:hover { color:var(--ink-1); }
+  main { max-width:1080px; margin:0 auto; padding:0 24px; }
+  .hero { padding:72px 0 40px; text-align:center; }
+  .eyebrow { font-family:var(--font-mono); font-size:11px; letter-spacing:.28em; color:var(--ink-3); text-transform:uppercase; display:flex; align-items:center; justify-content:center; gap:10px; margin-bottom:18px; }
+  .eyebrow .dot { width:4px; height:4px; border-radius:50%; background:var(--c-1); }
+  h1 { font-size:clamp(30px,4.5vw,44px); font-weight:650; letter-spacing:-.02em; line-height:1.15; margin-bottom:16px; }
+  h1 .grad { background:linear-gradient(135deg,var(--c-1),var(--c-2) 45%,var(--c-4)); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .lede { font-size:16px; color:var(--ink-2); max-width:560px; margin:0 auto; }
+  .privacy-line { margin-top:14px; font-family:var(--font-mono); font-size:12px; color:var(--ink-3); letter-spacing:.04em; }
+  /* ── filter ── */
+  .filters { display:flex; gap:8px; flex-wrap:wrap; justify-content:center; margin:36px 0 8px; }
+  .filters button { border:1px solid var(--line-2); background:var(--bg-1); color:var(--ink-2); font-family:inherit; font-size:13px; padding:6px 16px; border-radius:999px; cursor:pointer; transition:all .15s; }
+  .filters button.on { color:#fff; background:linear-gradient(135deg,var(--c-2),var(--c-4)); border-color:transparent; }
+  .filters button:not(.on):hover { color:var(--ink-1); border-color:var(--ink-3); }
+  /* ── sections ── */
+  .group-sec { padding:36px 0 8px; }
+  .group-sec h2 { font-size:13px; font-family:var(--font-mono); letter-spacing:.22em; text-transform:uppercase; color:var(--ink-3); margin-bottom:18px; display:flex; align-items:center; gap:14px; }
+  .group-sec h2::after { content:''; flex:1; height:1px; background:var(--line); }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:16px; }
+  .app-card { display:flex; gap:16px; align-items:flex-start; background:var(--bg-1); border:1px solid var(--line); border-radius:16px; padding:20px; text-decoration:none; transition:transform .18s, border-color .18s, box-shadow .18s; }
+  .app-card:hover { transform:translateY(-2px); border-color:var(--ink-4); box-shadow:0 8px 28px rgba(0,0,0,.07); }
+  html[data-theme="dark"] .app-card:hover { box-shadow:0 8px 28px rgba(0,0,0,.45); }
+  .app-card img.icon { width:60px; height:60px; border-radius:14px; flex-shrink:0; }
+  .app-card .meta { min-width:0; }
+  .app-card .name { font-weight:600; font-size:15.5px; display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+  .plat { font-family:var(--font-mono); font-size:10px; letter-spacing:.08em; color:var(--ink-3); border:1px solid var(--line-2); padding:1px 7px; border-radius:5px; }
+  .app-card .tagline { font-size:13.5px; color:var(--ink-2); margin-top:5px; line-height:1.5; }
+  .app-card .get { margin-top:10px; font-family:var(--font-mono); font-size:12px; letter-spacing:.05em; color:var(--c-2); display:flex; align-items:center; gap:6px; }
+  html[data-theme="light"] .app-card .get { color:#4a54c4; }
+  .app-card .get .arr { transition:transform .18s; }
+  .app-card:hover .get .arr { transform:translateX(3px); }
+  /* ── footer ── */
+  footer { margin-top:96px; padding:32px 24px 48px; border-top:1px solid var(--line); max-width:1080px; margin-left:auto; margin-right:auto; display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; font-size:12px; color:var(--ink-3); font-family:var(--font-mono); letter-spacing:.04em; }
+  footer a { color:var(--ink-2); }
+  .empty-note { display:none; text-align:center; color:var(--ink-3); padding:40px 0; font-size:14px; }
+  @media (max-width:640px){ .grid{grid-template-columns:1fr;} nav .links a.hidemob{display:none;} }
+</style>
+</head>
+<body>
+<script>
+(function(){var t='light';try{var s=localStorage.getItem('kinet-theme');if(s==='dark'||s==='light')t=s;}catch(e){}
+document.documentElement.setAttribute('data-theme',t);})();
+</script>
+<nav>
+  <div class="row">
+    <a class="brand" href="index.html"><svg class="mark" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs><linearGradient id="navg" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#00d4c8"/><stop offset=".5" stop-color="#7c8cff"/><stop offset="1" stop-color="#ff6b8a"/></linearGradient></defs><rect width="32" height="32" rx="8" fill="url(#navg)"/><path d="M7 22 C12 10 20 10 25 22" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/></svg>Kinet</a>
+    <div class="links">
+      <a href="index.html" data-i18n="nav_home">Home</a>
+      <a href="app-store-4-3-rejection.html" class="hidemob" data-i18n="nav_story">4.3 story</a>
+      <div class="lang">
+        <button data-l="zh-Hans">简</button>
+        <button data-l="zh-Hant">繁</button>
+        <button data-l="en" class="on">EN</button>
+        <button data-l="ja">日</button>
+      </div>
+    </div>
+  </div>
+</nav>
+<main>
+  <header class="hero">
+    <div class="eyebrow"><span class="dot"></span>KINET APPS<span class="dot"></span></div>
+    <h1 data-i18n="h1">Twenty apps. <span class="grad">Zero accounts.</span></h1>
+    <p class="lede" data-i18n="lede">Everything we ship — AI meeting notes, on-device assistants, focus tools, Mac utilities. Every one works offline-first and keeps your data on your device.</p>
+    <div class="privacy-line" data-i18n="privacy">NO ACCOUNTS · NO TRACKING · DATA STAYS ON DEVICE</div>
+  </header>
+  <div class="filters" id="filters"></div>
+  <div class="empty-note" data-i18n="empty">No apps in this group yet.</div>
+  <div id="groups"></div>
+</main>
+<footer>
+  <div>© Kinet</div>
+  <div><a href="index.html">kinetapp</a> · All on-device</div>
+  <div><a href="mailto:phinn@outlook.com">phinn@outlook.com</a></div>
+</footer>
+<script>
+const APP_GROUPS=[{"id": "ai", "en": "AI & Productivity", "zh": "AI 与效率", "zhHant": "AI 與效率", "ja": "AI・生産性"}, {"id": "focus", "en": "Focus & Calm", "zh": "专注与白噪音", "zhHant": "專注與白噪音", "ja": "集中・サウンド"}, {"id": "mactools", "en": "Mac Tools", "zh": "Mac 工具", "zhHant": "Mac 工具", "ja": "Mac ツール"}, {"id": "life", "en": "Life & Health", "zh": "生活与健康", "zhHant": "生活與健康", "ja": "生活・健康"}, {"id": "create", "en": "Reading & Creative", "zh": "阅读与创作", "zhHant": "閱讀與創作", "ja": "読書・クリエイティブ"}];
+const APPS=[{"id":"6782778566","group":"ai","name":"KinetBrief","fullName":"KinetBrief: AI Meeting Notes","tag":"Turns a day of meetings into one morning brief.","tagZh":"把一天的会议变成一份晨报。","icon":"https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/20/60/77/2060773c-5782-1d87-6188-8deeaf46d870/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg","url":"https://apps.apple.com/us/app/kinetbrief-ai-meeting-notes/id6782778566","price":"$6.99","platform":"iOS","genre":"Utilities"},{"id":"6820196518","group":"ai","name":"M5Chat","fullName":"M5Chat: AI Chat","tag":"AI chat that runs entirely on your device.","tagZh":"完全运行在本机的 AI 对话助手。","icon":"https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/84/3c/a4/843ca420-b9d1-3124-05e2-d223edbe5edc/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg","url":"https://apps.apple.com/us/app/m5chat-ai-chat/id6820196518","price":"$9.99","platform":"iOS","genre":"Productivity"},{"id":"6813593104","group":"ai","name":"KinetMinutes","fullName":"KinetMinutes: Meeting Notes","tag":"Meetings into structured notes — automatically, privately, on your Mac.","tagZh":"会议自动变结构化笔记 —— 私密,全在本机。","icon":"https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/b3/18/4b/b3184b68-01f5-d3b2-4d98-110571d19fb5/AppIcon-0-0-85-220-0-5-0-2x.png/512x512bb.png","url":"https://apps.apple.com/us/app/kinetminutes-meeting-notes/id6813593104","price":"$9.99","platform":"iOS","genre":"Productivity"},{"id":"6780944289","group":"ai","name":"KinetTask","fullName":"KinetTask: Private AI Tasks","tag":"100% on-device AI task manager. Your tasks never leave your phone.","tagZh":"100% 端侧 AI 任务管理,数据不出设备。","icon":"https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/9f/80/50/9f805042-08cc-19a6-66f2-82cd48a28013/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg","url":"https://apps.apple.com/us/app/kinettask-private-ai-tasks/id6780944289","price":"$6.99","platform":"iOS","genre":"Productivity"},{"id":"6815923723","group":"ai","name":"KinetMemory","fullName":"KinetMemory: Flashcards","tag":"Spaced repetition powered by FSRS, the most accurate scheduling algorithm.","tagZh":"FSRS 驱动的间隔重复记忆卡片。","icon":"https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/0b/69/e2/0b69e221-a94e-2641-381d-4ef1bb1a3d9a/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg","url":"https://apps.apple.com/us/app/kinetmemory-flashcards/id6815923723","price":"$9.99","platform":"iOS","genre":"Education"},{"id":"6797004663","group":"ai","name":"KinetStudy","fullName":"KinetStudy","tag":"AI homework grading for parents — photo in, feedback out.","tagZh":"家长版 AI 作业批改 —— 拍照即出反馈。","icon":"https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/9e/48/e2/9e48e2a7-167d-5395-1b72-38fc2df9dbe5/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg","url":"https://apps.apple.com/us/app/kinetstudy/id6797004663","price":"$6.99","platform":"iOS","genre":"Utilities"},{"id":"6809450051","group":"ai","name":"KinetAios","fullName":"KinetAios: All-in-One AI Agent","tag":"All-in-one native macOS AI agent workbench: code, research, writing, automation.","tagZh":"原生 macOS 一体化 AI Agent 工作台:代码、研究、写作、自动化。","icon":"https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/a6/f8/ca/a6f8cab2-4ecf-f366-4190-0fe2eb378ecd/AppIcon.png/512x512bb.png","url":"https://apps.apple.com/us/app/kinetaios-all-in-one-ai-agent/id6809450051","price":"$12.99","platform":"macOS","genre":"Utilities"},{"id":"6814033986","group":"focus","name":"KinetRain","fullName":"KinetRain: Rain Sounds","tag":"Rain on demand. Synthesized live in your menu bar — never a loop.","tagZh":"即点即下的雨声 —— 实时合成,永不成循环。","icon":"https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/2f/d5/30/2fd53008-d664-616a-35ef-25b7a86f94d9/AppIcon.png/512x512bb.png","url":"https://apps.apple.com/us/app/kinetrain-rain-sounds/id6814033986","price":"$6.99","platform":"iOS","genre":"Utilities"},{"id":"6817377455","group":"focus","name":"DriftDesk","fullName":"DriftDesk — Focus Ambience","tag":"Turns your menu bar into a pocket of calm.","tagZh":"把菜单栏变成一方平静角落。","icon":"https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/ab/2d/bd/ab2dbd9c-5b9c-488f-a119-84d6db01e6d3/AppIcon.png/512x512bb.png","url":"https://apps.apple.com/us/app/driftdesk-focus-ambience/id6817377455","price":"$4.99","platform":"macOS","genre":"Utilities"},{"id":"6820942179","group":"focus","name":"Clasp Focus","fullName":"Clasp Focus: Focus Timer","tag":"A focus ritual built for folding iPhones.","tagZh":"为折叠屏 iPhone 打造的专注仪式。","icon":"https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/57/0d/80/570d8074-0b01-4ba9-704f-3a2ea8c9db63/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/512x512bb.jpg","url":"https://apps.apple.com/us/app/clasp-focus-focus-timer/id6820942179","price":"$4.99","platform":"iOS","genre":"Productivity"},{"id":"6808698046","group":"mactools","name":"KinetFlashFind","fullName":"KinetFlashFind: File Search","tag":"Instant file search for Mac — indexes your entire disk.","tagZh":"Mac 即时文件搜索 —— 索引整块磁盘。","icon":"https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/d8/ec/b3/d8ecb3d6-d558-fad8-44d4-068419562b58/AppIcon.png/512x512bb.png","url":"https://apps.apple.com/us/app/kinetflashfind-file-search/id6808698046","price":"$6.99","platform":"macOS","genre":"Utilities"},{"id":"6813423397","group":"mactools","name":"KinetMagicDisk","fullName":"KinetMagicDisk: Disk Usage","tag":"See what fills your disk — interactive sunburst map, one-click cleanup.","tagZh":"看清磁盘都被什么占满 —— 交互式旭日图,一键清理。","icon":"https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/cc/a1/90/cca19075-0a51-0d6a-037b-3f421ba80089/AppIcon-0-0-85-220-0-5-0-2x.png/512x512bb.png","url":"https://apps.apple.com/us/app/kinetmagicdisk-disk-usage/id6813423397","price":"$9.99","platform":"macOS","genre":"Utilities"},{"id":"6817339084","group":"life","name":"FurChart","fullName":"FurChart — Pet Health Records","tag":"Your pet's complete medical history, always at hand.","tagZh":"宠物完整健康档案,随手可查。","icon":"https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/53/92/6e/53926e7f-9494-bb08-b393-9dcf8408067a/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg","url":"https://apps.apple.com/us/app/furchart-pet-health-records/id6817339084","price":"$4.99","platform":"iOS","genre":"Lifestyle"},{"id":"6773755689","group":"life","name":"KinetFit","fullName":"KinetFit: Workout Tracker","tag":"Fast, private workout tracking with measurable progress.","tagZh":"快速、私密的健身记录,每次训练都有迹可循。","icon":"https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/28/d9/27/28d927e8-4347-7895-ba1d-6a252cb4bb8f/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/512x512bb.jpg","url":"https://apps.apple.com/us/app/kinetfit-workout-tracker/id6773755689","price":"$4.99","platform":"iOS","genre":"Health & Fitness"},{"id":"6779978181","group":"life","name":"KinetMorning","fullName":"KinetMorning","tag":"One-tap daily check-in for aging parents. Peace of mind for the family.","tagZh":"独居老人的每日一键报平安。","icon":"https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/5d/26/0e/5d260e8b-a4f6-171a-5404-35c8b13c535d/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg","url":"https://apps.apple.com/us/app/kinetmorning/id6779978181","price":"$2.99","platform":"iOS","genre":"Lifestyle"},{"id":"6807457522","group":"life","name":"KinetElf","fullName":"KinetElf: Pocket AI Elf","tag":"An AI elf with personality and memory, living on your Dynamic Island.","tagZh":"住在灵动岛上的 AI 小精灵,有性格有记忆。","icon":"https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/a0/8f/3d/a08f3dad-bb4a-972e-c7ec-819b07391b2f/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg","url":"https://apps.apple.com/us/app/kinetelf-pocket-ai-elf/id6807457522","price":"$3.99","platform":"iOS","genre":"Lifestyle"},{"id":"6780600464","group":"life","name":"KinetSoul","fullName":"KinetSoul: AI Companion","tag":"A warm AI companion that stays on your own device.","tagZh":"一个温柔的 AI 伙伴,只留在你自己的设备里。","icon":"https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/5d/b7/96/5db7961e-8778-99af-abfc-30c1d119e410/AppIcon-0-0-1x_U007epad-0-8-0-85-220.png/512x512bb.jpg","url":"https://apps.apple.com/us/app/kinetsoul-ai-companion/id6780600464","price":"$6.99","platform":"iOS","genre":"Health & Fitness"},{"id":"6823855712","group":"create","name":"DuoFolio","fullName":"DuoFolio","tag":"Immersive two-page reader built for folding iPhones.","tagZh":"为折叠屏打造的沉浸式双页阅读器。","icon":"https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/e8/42/e9/e842e9c0-739e-2eae-dfbb-05f47ecceb4f/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg","url":"https://apps.apple.com/us/app/duofolio/id6823855712","price":"$6.99","platform":"iOS","genre":"Book"},{"id":"6829156684","group":"create","name":"DuoFrame Desk Calendar","fullName":"DuoFrame Desk Calendar","tag":"Your screen as a desk calendar that flips like real paper.","tagZh":"把屏幕变成像真纸一样翻页的台历。","icon":"https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/19/71/84/197184ae-0ad3-dfb2-b74e-a7783f752217/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg","url":"https://apps.apple.com/us/app/duoframe-desk-calendar/id6829156684","price":"$6.99","platform":"iOS","genre":"Lifestyle"},{"id":"6820624868","group":"create","name":"Promptside","fullName":"Promptside","tag":"A camera studio for foldable phones — flip and the roles swap.","tagZh":"折叠屏相机工作室 —— 一翻,角色互换。","icon":"https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/d9/f6/b7/d9f6b71f-1e9b-7117-ea84-1a555ad740a9/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg","url":"https://apps.apple.com/us/app/promptside/id6820624868","price":"$5.99","platform":"iOS","genre":"Photo & Video"}];
+const I18N = {
+  'en': { h1:'Twenty apps. <span class="grad">Zero accounts.</span>',
+    lede:'Everything we ship — AI meeting notes, on-device assistants, focus tools, Mac utilities. Every one works offline-first and keeps your data on your device.',
+    privacy:'NO ACCOUNTS · NO TRACKING · DATA STAYS ON DEVICE',
+    nav_home:'Home', nav_story:'4.3 story', all:'All', get:'App Store', empty:'No apps in this group yet.',
+    group: Object.fromEntries(APP_GROUPS.map(g=>[g.id,g.en])) },
+  'zh-Hans': { h1:'二十个 App,<span class="grad">零账号依赖</span>。',
+    lede:'我们上架的所有应用 —— AI 会议纪要、端侧 AI 助手、专注工具、Mac 实用工具。全部离线优先,数据只留在你的设备上。',
+    privacy:'无账号 · 无追踪 · 数据留在设备',
+    nav_home:'首页', nav_story:'4.3 复盘', all:'全部', get:'App Store', empty:'该分组暂无应用。',
+    group: Object.fromEntries(APP_GROUPS.map(g=>[g.id,g.zh])) },
+  'zh-Hant': { h1:'二十個 App,<span class="grad">零帳號依賴</span>。',
+    lede:'我們上架的所有應用 —— AI 會議紀要、端側 AI 助手、專注工具、Mac 實用工具。全部離線優先,資料只留在你的裝置上。',
+    privacy:'無帳號 · 無追蹤 · 資料留在裝置',
+    nav_home:'首頁', nav_story:'4.3 復盤', all:'全部', get:'App Store', empty:'該分組暫無應用。',
+    group: Object.fromEntries(APP_GROUPS.map(g=>[g.id,g.zhHant])) },
+  'ja': { h1:'20個のApp。<span class="grad">アカウント不要。</span>',
+    lede:'リリース中のすべて —— AI議事録、オンデバイスAIアシスタント、集中ツール、Macユーティリティ。すべてオフライン優先、データは端末から出ません。',
+    privacy:'アカウント不要 · トラッキングなし · データは端末内',
+    nav_home:'ホーム', nav_story:'4.3 誌', all:'すべて', get:'App Store', empty:'このグループにアプリはありません。',
+    group: Object.fromEntries(APP_GROUPS.map(g=>[g.id,g.ja])) },
+};
+let lang = 'en';
+try { lang = localStorage.getItem('kinet-lang') || 'en'; } catch(e){}
+if (!I18N[lang]) lang = 'en';
+
+function renderFilters(){
+  const f = document.getElementById('filters');
+  const t = I18N[lang];
+  f.innerHTML = '<button data-g="all" class="on">' + t.all + '</button>' +
+    APP_GROUPS.map(g=>'<button data-g="'+g.id+'">'+t.group[g.id]+'</button>').join('');
+  f.querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>{
+    f.querySelectorAll('button').forEach(x=>x.classList.remove('on'));
+    b.classList.add('on');
+    renderGroups(b.dataset.g);
+  }));
+}
+function renderGroups(show){
+  const t = I18N[lang];
+  const wrap = document.getElementById('groups');
+  const secs = APP_GROUPS.map(g=>{
+    const apps = APPS.filter(a=>a.group===g.id);
+    const hidden = show!=='all' && show!==g.id;
+    return '<section class="group-sec" data-g="'+g.id+'" style="'+(hidden?'display:none':'')+'">' +
+      '<h2>'+t.group[g.id]+' · '+apps.length+'</h2><div class="grid">' +
+      apps.map(a=>'<a class="app-card" href="'+a.url+'" target="_blank" rel="noopener">' +
+        '<img class="icon" src="'+a.icon+'" alt="'+a.fullName+' icon" loading="lazy">' +
+        '<div class="meta"><div class="name">'+a.fullName+' <span class="plat">'+a.platform+'</span></div>' +
+        '<div class="tagline">'+(lang==='zh-Hans'?a.tagZh:a.tag)+'</div>' +
+        '<div class="get">'+t.get+' · '+a.price+' <span class="arr">→</span></div>' +
+        '</div></a>').join('') +
+      '</div></section>';
+  }).join('');
+  wrap.innerHTML = secs;
+  document.querySelectorAll('.group-sec').forEach(s=>{
+    if (show==='all' || s.dataset.g===show) s.style.display='';
+  });
+  const anyVisible = show==='all' || APPS.some(a=>a.group===show);
+  document.querySelector('.empty-note').style.display = anyVisible ? 'none':'block';
+}
+function applyI18n(){
+  const t = I18N[lang];
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const k = el.dataset.i18n; if (t[k]) el.innerHTML = t[k];
+  });
+  document.documentElement.lang = lang==='zh-Hans'?'zh-CN':lang==='zh-Hant'?'zh-TW':'ja'===lang?'ja':'en';
+  document.querySelectorAll('.lang button').forEach(b=>b.classList.toggle('on', b.dataset.l===lang));
+}
+document.querySelectorAll('.lang button').forEach(b=>b.addEventListener('click',()=>{
+  lang = b.dataset.l;
+  try { localStorage.setItem('kinet-lang', lang); } catch(e){}
+  applyI18n(); renderFilters(); renderGroups(currentFilter());
+}));
+function currentFilter(){
+  const on = document.querySelector('#filters button.on');
+  return on ? on.dataset.g : 'all';
+}
+applyI18n(); renderFilters(); renderGroups('all');
+</script>
+</body>
+</html>
