@@ -88,6 +88,8 @@ document.documentElement.setAttribute('data-theme',t);})();
   nav .links { display: flex; gap: 22px; align-items: center; }
   nav .links a { font-size: 13px; color: var(--ink-3); transition: color .2s; }
   nav .links a:hover { color: var(--ink-1); }
+  nav .links a.nav-pill { font-family: var(--font-mono); font-size: 11px; letter-spacing: .08em; color: var(--ink-1); border: 1px solid var(--line-2); padding: 5px 12px; border-radius: 99px; transition: border-color .2s, color .2s, background .2s; }
+  nav .links a.nav-pill:hover { border-color: var(--ink-1); background: rgba(0,0,0,.03); }
   nav .navdiv { width: 1px; height: 18px; background: var(--line-2); margin: 0 4px; }
   nav .lang { display: flex; gap: 4px; }
   nav .lang button { background: transparent; border: 1px solid var(--line-2); color: var(--ink-3); border-radius: 6px; padding: 4px 9px; font-size: 11px; font-family: var(--font-mono); cursor: pointer; transition: all .15s; }
@@ -183,6 +185,18 @@ document.documentElement.setAttribute('data-theme',t);})();
   .ethos p { font-family: var(--font-serif); font-size: clamp(17px, 2vw, 20px); line-height: 1.7; color: var(--ink-2); max-width: 620px; margin: 0 auto; font-weight: 300; }
   .ethos p strong { color: var(--ink-1); font-weight: 400; border-bottom: 1px solid var(--line-2); }
   @media (max-width: 640px) { .ethos { padding: 40px 24px; } }
+  /* ── all-apps wall band ── */
+  .apps-band { margin: 0 0 96px; }
+  .apps-wall { display: block; max-width: 760px; margin: 0 auto; padding: 44px 40px; border: 1px solid var(--line); border-radius: 12px; background: linear-gradient(180deg, var(--bg-1), var(--bg-0)); text-align: center; text-decoration: none; transition: transform .18s, border-color .2s, box-shadow .2s; }
+  .apps-wall:hover { transform: translateY(-3px); border-color: var(--ink-4); box-shadow: 0 14px 36px rgba(0,0,0,.08); }
+  html[data-theme="dark"] .apps-wall:hover { box-shadow: 0 14px 36px rgba(0,0,0,.5); }
+  .wall-icons { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; max-width: 620px; margin: 0 auto 28px; }
+  .wall-icons img { width: 46px; height: 46px; border-radius: 11px; border: 1px solid var(--line); transition: transform .18s; }
+  .apps-wall:hover .wall-icons img { transform: translateY(-3px); }
+  .wall-sub { font-family: var(--font-serif); color: var(--ink-2); font-size: 15px; margin: 12px auto 20px; max-width: 480px; line-height: 1.65; }
+  .wall-go { display: inline-block; font-family: var(--font-mono); font-size: 12.5px; letter-spacing: .1em; color: var(--ink-1); border-bottom: 1px solid var(--ink-1); padding-bottom: 2px; transition: opacity .2s; }
+  .apps-wall:hover .wall-go { opacity: .7; }
+  @media (max-width: 640px) { .apps-wall { padding: 34px 18px; } .wall-icons img { width: 38px; height: 38px; border-radius: 9px; } }
 
   /* ── Closing + footer ── */
   .closing { text-align: center; max-width: 720px; margin: 0 auto; }
@@ -211,7 +225,7 @@ document.documentElement.setAttribute('data-theme',t);})();
       <a href="#study" data-i18n="nav_learn">Learning</a>
       <a href="#disk" data-i18n="nav_tools">Tools</a>
       <a href="#remote" data-i18n="nav_agent">Agent</a>
-      <a href="apps.html" data-i18n="nav_apps">Apps</a>
+      <a href="apps.html" class="nav-pill" data-i18n="nav_apps">Apps</a>
       <span class="navdiv"></span>
       <button id="theme-toggle" class="lang-btn" aria-label="Toggle theme" title="Theme">
         <svg id="icon-sun" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
@@ -602,6 +616,40 @@ document.documentElement.setAttribute('data-theme',t);})();
 
   </section>
 
+  <!-- ══════════ ALL APPS ══════════ -->
+  <section class="apps-band">
+    <a class="apps-wall" href="apps.html">
+      <div class="wall-icons" aria-hidden="true">
+        <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/20/60/77/2060773c-5782-1d87-6188-8deeaf46d870/AppIcon-0-0-1x_U007epad-0-1-85-220.png/200x200bb.jpg" alt="" loading="lazy">
+        <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/84/3c/a4/843ca420-b9d1-3124-05e2-d223edbe5edc/AppIcon-0-0-1x_U007epad-0-1-85-220.png/200x200bb.jpg" alt="" loading="lazy">
+        <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/b3/18/4b/b3184b68-01f5-d3b2-4d98-110571d19fb5/AppIcon-0-0-85-220-0-5-0-2x.png/200x200bb.png" alt="" loading="lazy">
+        <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/9f/80/50/9f805042-08cc-19a6-66f2-82cd48a28013/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/200x200bb.jpg" alt="" loading="lazy">
+        <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/12/d2/5d/12d25d31-c372-4dc0-698f-87b2fbc5c287/AppIcon-0-0-1x_U007epad-0-1-85-220.png/200x200bb.jpg" alt="" loading="lazy">
+        <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/0b/69/e2/0b69e221-a94e-2641-381d-4ef1bb1a3d9a/AppIcon-0-0-1x_U007epad-0-1-85-220.png/200x200bb.jpg" alt="" loading="lazy">
+        <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/fe/07/d1/fe07d123-e339-d1c5-5064-0e109a53bae5/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/200x200bb.jpg" alt="" loading="lazy">
+        <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/9e/48/e2/9e48e2a7-167d-5395-1b72-38fc2df9dbe5/AppIcon-0-0-1x_U007epad-0-1-85-220.png/200x200bb.jpg" alt="" loading="lazy">
+        <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/a6/f8/ca/a6f8cab2-4ecf-f366-4190-0fe2eb378ecd/AppIcon.png/200x200bb.png" alt="" loading="lazy">
+        <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/2f/d5/30/2fd53008-d664-616a-35ef-25b7a86f94d9/AppIcon.png/200x200bb.png" alt="" loading="lazy">
+        <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/ab/2d/bd/ab2dbd9c-5b9c-488f-a119-84d6db01e6d3/AppIcon.png/200x200bb.png" alt="" loading="lazy">
+        <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/57/0d/80/570d8074-0b01-4ba9-704f-3a2ea8c9db63/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/200x200bb.jpg" alt="" loading="lazy">
+        <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/d8/ec/b3/d8ecb3d6-d558-fad8-44d4-068419562b58/AppIcon.png/200x200bb.png" alt="" loading="lazy">
+        <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/cc/a1/90/cca19075-0a51-0d6a-037b-3f421ba80089/AppIcon-0-0-85-220-0-5-0-2x.png/200x200bb.png" alt="" loading="lazy">
+        <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/53/92/6e/53926e7f-9494-bb08-b393-9dcf8408067a/AppIcon-0-0-1x_U007epad-0-1-85-220.png/200x200bb.jpg" alt="" loading="lazy">
+        <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/28/d9/27/28d927e8-4347-7895-ba1d-6a252cb4bb8f/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/200x200bb.jpg" alt="" loading="lazy">
+        <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/5d/26/0e/5d260e8b-a4f6-171a-5404-35c8b13c535d/AppIcon-0-0-1x_U007epad-0-1-85-220.png/200x200bb.jpg" alt="" loading="lazy">
+        <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/a0/8f/3d/a08f3dad-bb4a-972e-c7ec-819b07391b2f/AppIcon-0-0-1x_U007epad-0-1-85-220.png/200x200bb.jpg" alt="" loading="lazy">
+        <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/5d/b7/96/5db7961e-8778-99af-abfc-30c1d119e410/AppIcon-0-0-1x_U007epad-0-8-0-85-220.png/200x200bb.jpg" alt="" loading="lazy">
+        <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/e8/42/e9/e842e9c0-739e-2eae-dfbb-05f47ecceb4f/AppIcon-0-0-1x_U007epad-0-1-85-220.png/200x200bb.jpg" alt="" loading="lazy">
+        <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/19/71/84/197184ae-0ad3-dfb2-b74e-a7783f752217/AppIcon-0-0-1x_U007epad-0-1-85-220.png/200x200bb.jpg" alt="" loading="lazy">
+        <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/d9/f6/b7/d9f6b71f-1e9b-7117-ea84-1a555ad740a9/AppIcon-0-0-1x_U007epad-0-1-85-220.png/200x200bb.jpg" alt="" loading="lazy">
+      </div>
+      <div class="section-label" data-i18n="apps_cta_label"></div>
+      <h2 class="section-h" data-i18n="apps_cta_h"></h2>
+      <p class="wall-sub" data-i18n="apps_cta_sub"></p>
+      <span class="wall-go" data-i18n="apps_cta_go"></span>
+    </a>
+  </section>
+
   <!-- ══════════ ETHOS ══════════ -->
   <section class="ethos">
     <div class="lock">🔒</div>
@@ -637,7 +685,7 @@ document.getElementById('theme-toggle').addEventListener('click', function(){
 });
 const I = {
   "zh-Hans": {
-    nav_day:"一天", nav_work:"工作与生活", nav_learn:"学习", nav_tools:"工具", nav_agent:"智能体", nav_apps:"全部应用",
+    nav_day:"一天", nav_work:"工作与生活", nav_learn:"学习", nav_tools:"工具", nav_agent:"智能体", nav_apps:"全部应用", apps_cta_label:"所有应用", apps_cta_h:"22 个,全部做完。", apps_cta_sub:"任务、笔记、专注、回忆、折叠双屏 —— 全部在列,每个都能直接下载。", apps_cta_go:"浏览全部 22 个 app →",
     h1:"一个人的完整一天。",
     lede:"这不是一堆产品的清单。<br>是 <em>一条</em> 从清晨到深夜、再回到清晨的路径——和路径之外的日子。",
     products_label:"四个产品，一条路径", products_h:"把一天过完。",
@@ -716,7 +764,7 @@ const I = {
     cta_repo:"开源仓库"
   },
   "zh-Hant": {
-    nav_day:"一天", nav_work:"工作與生活", nav_learn:"學習", nav_tools:"工具", nav_agent:"智慧代理", nav_apps:"全部應用",
+    nav_day:"一天", nav_work:"工作與生活", nav_learn:"學習", nav_tools:"工具", nav_agent:"智慧代理", nav_apps:"全部應用", apps_cta_label:"所有應用", apps_cta_h:"22 個,全部做完。", apps_cta_sub:"任務、筆記、專注、回憶、摺疊雙屏 —— 全部在列,每個都能直接下載。", apps_cta_go:"瀏覽全部 22 個 app →",
     h1:"一個人的完整一天。",
     lede:"這不是一堆產品的清單。<br>是 <em>一條</em> 從清晨到深夜、再回到清晨的路徑——和路徑之外的日子。",
     products_label:"四個產品，一條路徑", products_h:"把一天過完。",
@@ -795,7 +843,7 @@ const I = {
     cta_repo:"開源倉庫"
   },
   "en": {
-    nav_day:"A day", nav_work:"Work &amp; life", nav_learn:"Learning", nav_tools:"Tools", nav_agent:"Agent", nav_apps:"Apps",
+    nav_day:"A day", nav_work:"Work &amp; life", nav_learn:"Learning", nav_tools:"Tools", nav_agent:"Agent", nav_apps:"Apps", apps_cta_label:"Every app", apps_cta_h:"22 shipped. All live.", apps_cta_sub:"Tasks, notes, focus, memory, foldable dual-screen — the whole catalog, each one downloadable today.", apps_cta_go:"Browse all 22 apps →",
     h1:"A complete day, for one.",
     lede:"This isn't a list of apps.<br>It's <em>one</em> path — dawn to midnight, and back to dawn. Plus the rest of life.",
     products_label:"Four products, one path", products_h:"Finish the day.",
@@ -874,7 +922,7 @@ const I = {
     cta_repo:"Source"
   },
   "ja": {
-    nav_day:"一日", nav_work:"仕事と暮らし", nav_learn:"学び", nav_tools:"ツール", nav_agent:"エージェント", nav_apps:"アプリ一覧",
+    nav_day:"一日", nav_work:"仕事と暮らし", nav_learn:"学び", nav_tools:"ツール", nav_agent:"エージェント", nav_apps:"アプリ一覧", apps_cta_label:"すべてのアプリ", apps_cta_h:"22本、すべてリリース済み。", apps_cta_sub:"タスク、ノート、集中、記憶、折りたたみデュアルスクリーン —— カタログのすべて、今すぐダウンロードできます。", apps_cta_go:"22個のアプリを見る →",
     h1:"ひとりの、完全な一日。",
     lede:"これはアプリのリストじゃない。<br>夜明けから深夜、そしてまた夜明けへ — <em>ひとつ</em>の道のりと、その先の日々だ。",
     products_label:"4つの製品、ひとつの道のり", products_h:"一日を終わらせる。",
