@@ -54,27 +54,23 @@
   .group-sec { padding:36px 0 8px; }
   .group-sec h2 { font-size:13px; font-family:var(--font-mono); letter-spacing:.22em; text-transform:uppercase; color:var(--ink-3); margin-bottom:18px; display:flex; align-items:center; gap:14px; }
   .group-sec h2::after { content:''; flex:1; height:1px; background:var(--line); }
-  .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(320px,1fr)); gap:18px; }
-  .app-card { position:relative; display:flex; gap:16px; align-items:stretch; background:var(--bg-1); border:1px solid var(--line); border-radius:18px; padding:20px; text-decoration:none; overflow:hidden; transition:transform .18s, border-color .18s, box-shadow .18s; }
-  .app-card::before { content:''; position:absolute; inset:0; background:radial-gradient(150px 100px at 90% -10%, rgba(99,102,241,.12), transparent 70%); opacity:0; transition:opacity .18s; pointer-events:none; }
-  .app-card:hover { transform:translateY(-3px); border-color:#a5b4fc; box-shadow:0 10px 32px rgba(79,70,229,.13); }
-  .app-card:hover::before { opacity:1; }
-  html[data-theme="dark"] .app-card:hover { border-color:#4c4f77; box-shadow:0 10px 32px rgba(0,0,0,.5); }
-  .app-card img.icon { width:66px; height:66px; border-radius:16px; align-self:flex-start; flex-shrink:0; box-shadow:0 4px 14px rgba(0,0,0,.16); }
-  .app-card .meta { min-width:0; flex:1; display:flex; flex-direction:column; }
-  .app-card .name { font-weight:650; font-size:15.5px; display:flex; align-items:center; gap:7px; flex-wrap:wrap; }
-  .plat { font-family:var(--font-mono); font-size:10px; letter-spacing:.08em; color:var(--ink-3); border:1px solid var(--line-2); padding:1px 7px; border-radius:5px; }
-  .duo-badge { font-family:var(--font-mono); font-size:10px; font-weight:600; letter-spacing:.08em; color:#7c3aed; border:1px solid #c4b5fd; background:rgba(139,92,246,.10); padding:1px 8px; border-radius:5px; }
-  .duo-badge.native { color:#fff; background:#8b5cf6; border-color:#8b5cf6; box-shadow:0 2px 8px rgba(139,92,246,.35); }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:16px; }
+  .app-card { display:flex; gap:16px; align-items:flex-start; background:var(--bg-1); border:1px solid var(--line); border-radius:16px; padding:20px; text-decoration:none; transition:transform .18s, border-color .18s, box-shadow .18s; }
+  .app-card:hover { transform:translateY(-2px); border-color:var(--ink-4); box-shadow:0 8px 28px rgba(0,0,0,.07); }
+  html[data-theme="dark"] .app-card:hover { box-shadow:0 8px 28px rgba(0,0,0,.45); }
+  .app-card img.icon { width:60px; height:60px; border-radius:14px; flex-shrink:0; }
+  .app-card .meta { min-width:0; }
+  .app-card .name { font-weight:600; font-size:15.5px; display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+  .plat { font-family:var(--font-mono); font-size:10px; letter-spacing:.08em; color:var(--ink-3); border:1px solid var(--line-2); padding:1px 7px; border-radius:5px; flex-shrink:0; }
+  .duo-badge { font-family:var(--font-mono); font-size:10px; letter-spacing:.08em; color:#8b5cf6; border:1px solid #c4b5fd; background:rgba(139,92,246,.08); padding:1px 7px; border-radius:5px; flex-shrink:0; }
+  .duo-badge.native { color:#fff; background:#8b5cf6; border-color:#8b5cf6; }
   html[data-theme="dark"] .duo-badge { color:#c4b5fd; border-color:#6d28d9; background:rgba(139,92,246,.16); }
   html[data-theme="dark"] .duo-badge.native { color:#fff; background:#7c3aed; }
-  .app-card .tagline { font-size:13.5px; color:var(--ink-2); margin-top:6px; line-height:1.55; }
-  .app-card .foot { margin-top:auto; padding-top:14px; display:flex; align-items:center; justify-content:space-between; gap:10px; }
-  .app-card .genre { font-family:var(--font-mono); font-size:10px; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-3); border:1px dashed var(--line-2); padding:1px 8px; border-radius:5px; white-space:nowrap; flex-shrink:0; }
-  .app-card .get { font-family:var(--font-mono); font-size:12px; letter-spacing:.05em; color:var(--c-2); display:flex; align-items:center; gap:6px; white-space:nowrap; }
+  .app-card .tagline { font-size:13.5px; color:var(--ink-2); margin-top:5px; line-height:1.5; }
+  .app-card .get { margin-top:10px; font-family:var(--font-mono); font-size:12px; letter-spacing:.05em; color:var(--c-2); display:flex; align-items:center; gap:6px; }
   html[data-theme="light"] .app-card .get { color:#4a54c4; }
   .app-card .get .arr { transition:transform .18s; }
-  .app-card:hover .get .arr { transform:translateX(4px); }
+  .app-card:hover .get .arr { transform:translateX(3px); }
   /* ── footer ── */
   footer { margin-top:96px; padding:32px 24px 48px; border-top:1px solid var(--line); max-width:1080px; margin-left:auto; margin-right:auto; display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; font-size:12px; color:var(--ink-3); font-family:var(--font-mono); letter-spacing:.04em; }
   footer a { color:var(--ink-2); }
@@ -147,7 +143,6 @@ let lang = 'en';
 try { lang = localStorage.getItem('kinet-lang') || 'en'; } catch(e){}
 if (!I18N[lang]) lang = 'en';
 
-const GENRE_SHORT = {'Utilities':'UTIL','Productivity':'PROD','Games':'GAME','Education':'EDU','macOS':'MAC','Lifestyle':'LIFE','Health & Fitness':'FIT','Book':'BOOK','Photo & Video':'CAM'};
 function renderFilters(){
   const f = document.getElementById('filters');
   const t = I18N[lang];
@@ -169,9 +164,9 @@ function renderGroups(show){
       '<h2>'+t.group[g.id]+' · '+apps.length+'</h2><div class="grid">' +
       apps.map(a=>'<a class="app-card" href="'+a.url+'" target="_blank" rel="noopener">' +
         '<img class="icon" src="'+a.icon+'" alt="'+a.fullName+' icon" loading="lazy">' +
-        '<div class="meta"><div class="name">'+a.fullName+' <span class="plat">'+a.platform+'</span>'+(a.duoNative?' <span class="duo-badge native">DUO NATIVE</span>':(a.duo?' <span class="duo-badge">DUO</span>':''))+'</div>' +
+        '<div class="meta"><div class="name">'+a.fullName+' '+(a.duoNative?'<span class="duo-badge native">DUO NATIVE</span>':(a.duo?'<span class="duo-badge">DUO</span>':''))+'<span class="plat">'+a.platform+'</span></div>' +
         '<div class="tagline">'+(lang==='zh-Hans'?a.tagZh:a.tag)+'</div>' +
-        '<div class="foot"><span class="genre">'+(GENRE_SHORT[a.genre]||a.genre)+'</span><span class="get">'+t.get+' · '+a.price+' <span class="arr">→</span></span></div>' +
+        '<div class="get">'+t.get+' · '+a.price+' <span class="arr">→</span></div>' +
         '</div></a>').join('') +
       '</div></section>';
   }).join('');
