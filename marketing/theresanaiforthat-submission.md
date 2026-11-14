@@ -1,5 +1,10 @@
 # There's an AI for That — 提交备料(2026-11-13)
 
+> **⛔ 2026-11-14 放弃:免费通道已关停。** 实测 `/submit/` 302 → `/launch/` 付费页
+> ($49 起,唯一终点「Pay & Launch Tool」走 Stripe);`/create-tool/` 404 类重定向到搜索,
+> `/create/` 是平台托管 mini-tool 非收录。备料保留作档案,若未来 TAAFT 恢复免费收录可复用。
+> 免费目录替代:AlternativeTo(备料见 KinetAiosWin `PROMOTION_ALTERNATIVE.md`,注意 CF 挡自动化须用户手动)。
+
 > 提交入口: https://theresanaiforthat.com/submit (免费,需注册账号;人工手贴,agent 不碰——同 PH 红线逻辑)
 > 一次只提 1 款: KinetAios。其余 21 款是 utility(非 AI 站受众),提了 dilute 审核通过率,不提。
 
